@@ -60,22 +60,114 @@
 }
 
 // Navigation
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &.nested {
+    padding-left: 16px; // Indentation for nested levels
+    // Optional: add a border line on the left for visual hierarchy
+    border-left: 1px solid var(--md-sys-color-outline-variant);
+    margin-left: 12px;
+  }
+}
+
+.nav-item {
+  margin-bottom: 4px;
+
+  details > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // Hide default marker
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    .nav-arrow {
+      fill: var(--md-sys-color-on-surface-variant);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  details[open] > summary .nav-arrow {
+    transform: rotate(180deg);
+  }
+}
+
 .nav-link {
   display: block;
   padding: 12px 16px;
   border-radius: 28px; // Full pill shape
   color: var(--md-sys-color-on-surface-variant);
   font-weight: 500;
-  margin-bottom: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
 
   &:hover {
     background-color: var(--md-sys-color-surface-variant);
-    text-decoration: none;
   }
 
   &.active {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
+    font-weight: 700;
+  }
+}
+
+// Search
+.sidebar-search {
+  padding: 0 0 16px 0;
+
+  input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 28px;
+    border: 1px solid var(--md-sys-color-outline);
+    background-color: var(--md-sys-color-surface-container-high); // slightly distinct
+    color: var(--md-sys-color-on-surface);
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: 2px solid var(--md-sys-color-primary);
+      border-color: transparent;
+    }
+  }
+
+  .search-results {
+    margin-top: 8px;
+    background: var(--md-sys-color-surface-container-high);
+    border-radius: 8px;
+    overflow: hidden;
+
+    // Only show when has content
+    &:empty {
+      display: none;
+    }
+
+    a {
+      display: block;
+      padding: 8px 12px;
+      color: var(--md-sys-color-on-surface);
+      text-decoration: none;
+      font-size: 13px;
+      border-bottom: 1px solid var(--md-sys-color-outline-variant);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: var(--md-sys-color-surface-variant);
+      }
+    }
   }
 }
 

@@ -1,69 +1,86 @@
 # Materialistic Jekyll Theme
 
-A Jekyll theme for technical documentation built with the latest Google Material Design 3 specifications.
-
-[View Demo](https://toxicoder.github.io/materialistic-jekyll/)
+A Material Design 3 Jekyll theme for technical documentation. Inspired by the structure of MkDocs, but built natively for Jekyll.
 
 ## Features
 
-- **Material Design 3**: Fully compliant with Material You design specs.
-- **50 Premade Color Palettes**: Easily switch between 50 diverse color schemes.
-- **Developer Optimized**: Typography, code highlighting, and layout optimized for technical docs.
-- **Responsive**: Works on mobile, tablet, and desktop.
+*   **Material Design 3**: Fully compliant with the latest Material Design specifications (Material You).
+*   **Structured Documentation**: Use the `docs/` directory for your content.
+*   **Nested Navigation**: Define a hierarchical sidebar in `_data/navigation.yml`.
+*   **Search**: Built-in client-side search.
+*   **Color Palettes**: 50 pre-made color palettes.
+*   **Responsive**: Optimized for mobile, tablet, and desktop.
 
 ## Installation
 
-You can use this theme by forking this repository or copying the files to your Jekyll project.
+1.  Fork or copy this repository.
+2.  Install dependencies:
+    ```bash
+    bundle install
+    ```
+3.  Run the server:
+    ```bash
+    bundle exec jekyll serve
+    ```
 
-1. **Fork or Clone**: Clone this repository to get started.
-2. **Install Dependencies**: Run `bundle install` to install Jekyll and other dependencies.
-3. **Run Locally**: Run `bundle exec jekyll serve` to start the local development server.
+## Configuration
 
-## Usage
+### Directory Structure
 
-### Changing Color Palettes
+Place your documentation files in the `docs/` directory. You can create subdirectories for better organization.
 
-You can change the color palette by modifying `_config.yml`. The theme supports 50 palettes (`palette-1` to `palette-50`).
+```
+docs/
+├── index.md
+├── configuration/
+│   ├── index.md
+│   └── project-information.md
+└── advanced/
+    └── settings.md
+```
+
+### Navigation
+
+Define your sidebar structure in `_data/navigation.yml`.
+
+```yaml
+docs:
+  - title: Home
+    url: /docs/
+  - title: Configuration
+    children:
+      - title: Project Information
+        url: /docs/configuration/project-information/
+```
+
+### Search
+
+Search is enabled by default. It indexes all pages with a title.
+
+### Customization
+
+You can add extra CSS or JavaScript files by updating `_config.yml`:
+
+```yaml
+extra_css:
+  - /assets/css/custom.css
+extra_javascript:
+  - /assets/js/custom.js
+```
+
+### Palettes
+
+Change the color palette in `_config.yml`:
 
 ```yaml
 theme_settings:
-  palette: "palette-12"
+  palette: "palette-1" # Options: palette-1 to palette-50
 ```
 
-Alternatively, you can override it per page in the Front Matter:
+## Contributing
 
-```yaml
----
-layout: doc
-title: My Page
-palette: "palette-4"
----
-```
-
-### Layouts
-
-- `default`: Base layout.
-- `home`: Landing page layout.
-- `doc`: Documentation layout with sidebar navigation.
-- `post`: Blog post layout.
-- `page`: Standard page layout.
-
-### Documentation Structure
-
-To add pages to the sidebar, create markdown files in your root directory (or subdirectories) and ensure they have a `title` in the Front Matter.
-
-```yaml
----
-layout: doc
-title: Getting Started
-permalink: /getting-started/
----
-```
-
-## Customization
-
-To customize the colors further, you can edit `_sass/_palettes.scss` or override the CSS variables in your own CSS file.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
-MIT
+[MIT](https://choosealicense.com/licenses/mit/)

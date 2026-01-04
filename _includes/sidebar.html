@@ -1,12 +1,27 @@
 <nav class="sidebar">
-  <div style="padding-bottom: 16px;">
+  <div class="sidebar-header" style="padding-bottom: 16px;">
     <strong>Navigation</strong>
   </div>
-  {% for p in site.pages %}
-    {% if p.title and p.autonav != false %}
-      <a class="nav-link {% if p.url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">
-        {{ p.title }}
-      </a>
-    {% endif %}
-  {% endfor %}
+
+  <div class="sidebar-search">
+    <input type="text" id="search-input" placeholder="Search docs..." aria-label="Search documentation">
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  {% if site.data.navigation.docs %}
+    <ul class="nav-list">
+      {% for item in site.data.navigation.docs %}
+        {% include nav_item.html item=item %}
+      {% endfor %}
+    </ul>
+  {% else %}
+    {% comment %} Fallback for flat structure {% endcomment %}
+    {% for p in site.pages %}
+      {% if p.title and p.autonav != false %}
+        <a class="nav-link {% if p.url == page.url %}active{% endif %}" href="{{ p.url | relative_url }}">
+          {{ p.title }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 </nav>
