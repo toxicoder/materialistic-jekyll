@@ -8,12 +8,9 @@
   <div style="flex: 1;"></div>
   <div class="nav-controls">
     <select id="theme-picker" class="btn btn-outlined btn-control">
-      <option value="palette-1">Purple</option>
-      <option value="palette-25">Deep Blue</option>
-      <option value="palette-16">Red</option>
-      <option value="palette-9">Teal</option>
-      <option value="palette-6">Gold</option>
-      <option value="palette-30">Pink</option>
+      {% for palette in site.data.palettes %}
+      <option value="{{ palette.id }}">{{ palette.name }}</option>
+      {% endfor %}
     </select>
     <button id="dark-mode-toggle" class="btn btn-outlined btn-control" aria-label="Toggle dark mode">
       <span style="font-size: 20px;">☀</span>
