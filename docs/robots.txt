@@ -1,1 +1,1 @@
-Sitemap: https://toxicoder.github.io/sitemap.xml
+Sitemap: https://toxicoder.github.io/materialistic-jekyll/sitemap.xml
