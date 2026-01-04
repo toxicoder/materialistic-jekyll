@@ -1,5 +1,4 @@
 // Color Logic
-@import "palettes";
 
 // This file handles applying the correct palette based on configuration or manual override.
 // In a real Jekyll environment, we can't easily dynamically inject the class on :root based on _config.yml without Liquid.
