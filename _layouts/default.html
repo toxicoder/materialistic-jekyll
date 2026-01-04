@@ -3,6 +3,13 @@
 
   {%- include head.html -%}
 
+  <!-- Extra CSS -->
+  {% if site.extra_css %}
+    {% for css in site.extra_css %}
+      <link rel="stylesheet" href="{{ css | relative_url }}">
+    {% endfor %}
+  {% endif %}
+
   <body>
 
     {%- include header.html -%}
@@ -20,6 +27,14 @@
     {%- include footer.html -%}
 
     <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/search.js" | relative_url }}"></script>
+
+    <!-- Extra JS -->
+    {% if site.extra_javascript %}
+      {% for js in site.extra_javascript %}
+        <script src="{{ js | relative_url }}"></script>
+      {% endfor %}
+    {% endif %}
 
   </body>
 
