@@ -1,0 +1,18 @@
+title: Material Tech
+description: A Material Design 3 Jekyll theme for technical documentation.
+baseurl: ""
+url: ""
+
+theme_settings:
+  palette: "palette-1" # Default palette (1-50)
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - generate_palettes.py

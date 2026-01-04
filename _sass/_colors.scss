@@ -1,0 +1,11 @@
+// Color Logic
+@import "palettes";
+
+// This file handles applying the correct palette based on configuration or manual override.
+// In a real Jekyll environment, we can't easily dynamically inject the class on :root based on _config.yml without Liquid.
+// So we rely on the layout to add the class `palette-X` to the body or html tag.
+
+// However, we can set a default fallback here.
+:root {
+  @extend .palette-1;
+}
