@@ -2,8 +2,16 @@
   
     
     {
+      "title": "Advanced Settings",
+      "url": "/docs/configuration/advanced/",
+      "content": "Advanced SettingsThis is a placeholder page for Advanced Settings."
+    },
+    
+  
+    
+    {
       "title": "Configuration",
-      "url": "/materialistic-jekyll/configuration/",
+      "url": "/configuration/",
       "content": "ConfigurationColor PalettesMaterialistic Jekyll Theme comes with 50 pre-generated color palettes. You can set the global palette in _config.yml:theme_settings:  palette: &quot;palette-1&quot;Or override it per page:---palette: &quot;palette-10&quot;---NavigationThe sidebar navigation is automatically generated based on the pages in your project."
     },
     
@@ -11,29 +19,53 @@
     
     {
       "title": "Getting Started",
-      "url": "/materialistic-jekyll/getting-started/",
+      "url": "/getting-started/",
       "content": "Getting StartedInstallationThis theme is designed to be used as a template.  Fork the repository or click the “Use this template” button on GitHub.  Clone your new repository locally.  Run bundle install to install dependencies.UsageCreate your markdown files and specify the layout in the front matter.---layout: doctitle: My Documentation---Running Locallybundle exec jekyll serve"
     },
     
   
     
     {
+      "title": "High-Level Features",
+      "url": "/docs/high-level-features/",
+      "content": "High-Level FeaturesThis is a placeholder page for High-Level Features."
+    },
+    
+  
+    
+    {
       "title": "Documentation Home",
-      "url": "/materialistic-jekyll/docs/",
+      "url": "/docs/",
       "content": "Welcome to Materialistic JekyllThis is the main documentation hub. Use the sidebar to navigate through the topics.Features  Material Design 3: Fully compliant with the latest design specs.  Nested Navigation: Organize your docs with ease.  Search: Built-in client-side search."
     },
     
   
     
     {
+      "title": "Posts API",
+      "url": "/docs/api/posts/",
+      "content": "Posts APIThis is a placeholder page for the Posts API endpoint."
+    },
+    
+  
+    
+    {
       "title": "Project Information",
-      "url": "/materialistic-jekyll/docs/configuration/project-information/",
+      "url": "/docs/configuration/project-information/",
       "content": "Project InformationThis page demonstrates a nested documentation page.DetailsThe URL for this page should be /docs/configuration/project-information/."
     },
     
   
     
   
+    
+  
+    
+    {
+      "title": "Users API",
+      "url": "/docs/api/users/",
+      "content": "# Users APIThis is a placeholder page for the Users API endpoint."
+    },
     
   
     
