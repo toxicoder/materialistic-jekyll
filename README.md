@@ -2,6 +2,8 @@
 
 A Jekyll theme for technical documentation built with the latest Google Material Design 3 specifications.
 
+[View Demo](https://toxicoder.github.io/materialistic-jekyll/)
+
 ## Features
 
 - **Material Design 3**: Fully compliant with Material You design specs.
