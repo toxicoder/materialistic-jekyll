@@ -1,0 +1,150 @@
+- id: palette-1
+  name: "Purple"
+  color: "#4B11E3"
+- id: palette-2
+  name: "Red 2"
+  color: "#DB5E83"
+- id: palette-3
+  name: "Red 3"
+  color: "#A62952"
+- id: palette-4
+  name: "Red 4"
+  color: "#CF0B3D"
+- id: palette-5
+  name: "Orange 5"
+  color: "#AA4909"
+- id: palette-6
+  name: "Gold"
+  color: "#6D5906"
+- id: palette-7
+  name: "Green 7"
+  color: "#4E6105"
+- id: palette-8
+  name: "Green 8"
+  color: "#0C8F08"
+- id: palette-9
+  name: "Teal"
+  color: "#06695A"
+- id: palette-10
+  name: "Cyan 10"
+  color: "#06636E"
+- id: palette-11
+  name: "Blue 11"
+  color: "#07618C"
+- id: palette-12
+  name: "Blue 12"
+  color: "#0A54C5"
+- id: palette-13
+  name: "Blue 13"
+  color: "#3824C1"
+- id: palette-14
+  name: "Purple 14"
+  color: "#912AAA"
+- id: palette-15
+  name: "Red 15"
+  color: "#C70B3D"
+- id: palette-16
+  name: "Red"
+  color: "#CE120B"
+- id: palette-17
+  name: "Red 17"
+  color: "#BD2A0A"
+- id: palette-18
+  name: "Orange 18"
+  color: "#8D4A07"
+- id: palette-19
+  name: "Orange 19"
+  color: "#755606"
+- id: palette-20
+  name: "Yellow 20"
+  color: "#5B5D05"
+- id: palette-21
+  name: "Green 21"
+  color: "#447806"
+- id: palette-22
+  name: "Cyan 22"
+  color: "#056839"
+- id: palette-23
+  name: "Cyan 23"
+  color: "#056761"
+- id: palette-24
+  name: "Blue 24"
+  color: "#07627D"
+- id: palette-25
+  name: "Deep Blue"
+  color: "#0A60B7"
+- id: palette-26
+  name: "Blue 26"
+  color: "#0C30E5"
+- id: palette-27
+  name: "Blue 27"
+  color: "#540EE3"
+- id: palette-28
+  name: "Purple 28"
+  color: "#A214C8"
+- id: palette-29
+  name: "Pink 29"
+  color: "#D10B79"
+- id: palette-30
+  name: "Pink"
+  color: "#D30B3A"
+- id: palette-31
+  name: "Red 31"
+  color: "#B60A13"
+- id: palette-32
+  name: "Red 32"
+  color: "#B02609"
+- id: palette-33
+  name: "Orange 33"
+  color: "#9A4108"
+- id: palette-34
+  name: "Orange 34"
+  color: "#805107"
+- id: palette-35
+  name: "Yellow 35"
+  color: "#655C05"
+- id: palette-36
+  name: "Green 36"
+  color: "#4A6205"
+- id: palette-37
+  name: "Green 37"
+  color: "#286705"
+- id: palette-38
+  name: "Green 38"
+  color: "#05682F"
+- id: palette-39
+  name: "Cyan 39"
+  color: "#056751"
+- id: palette-40
+  name: "Cyan 40"
+  color: "#06646C"
+- id: palette-41
+  name: "Blue 41"
+  color: "#076189"
+- id: palette-42
+  name: "Blue 42"
+  color: "#0B50D0"
+- id: palette-43
+  name: "Blue 43"
+  color: "#181DDD"
+- id: palette-44
+  name: "Purple 44"
+  color: "#6E19C9"
+- id: palette-45
+  name: "Pink 45"
+  color: "#C0109C"
+- id: palette-46
+  name: "Red 46"
+  color: "#D50B4C"
+- id: palette-47
+  name: "Red 47"
+  color: "#DB0C16"
+- id: palette-48
+  name: "Red 48"
+  color: "#C31A0A"
+- id: palette-49
+  name: "Orange 49"
+  color: "#954608"
+- id: palette-50
+  name: "Orange 50"
+  color: "#775506"
