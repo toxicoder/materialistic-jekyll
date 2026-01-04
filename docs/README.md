@@ -13,19 +13,11 @@ A Jekyll theme for technical documentation built with the latest Google Material
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+You can use this theme by forking this repository or copying the files to your Jekyll project.
 
-```ruby
-gem "material-tech-theme"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: material-tech-theme
-```
-
-(Note: Since this is a local theme for now, copy the files to your Jekyll project or set it up as a remote theme).
+1. **Fork or Clone**: Clone this repository to get started.
+2. **Install Dependencies**: Run `bundle install` to install Jekyll and other dependencies.
+3. **Run Locally**: Run `bundle exec jekyll serve` to start the local development server.
 
 ## Usage
 
