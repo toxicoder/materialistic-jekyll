@@ -26,6 +26,35 @@ document.addEventListener('DOMContentLoaded', function() {
   const html = document.documentElement;
   const storedPalette = localStorage.getItem('theme-palette');
 
+  // Dark Mode Logic
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  const storedDarkMode = localStorage.getItem('theme-dark-mode');
+
+  function updateDarkModeIcon(isDark) {
+      if (!darkModeToggle) return;
+      const span = darkModeToggle.querySelector('span');
+      if (span) {
+          span.textContent = isDark ? '☾' : '☀';
+      }
+  }
+
+  // Init Dark Mode
+  if (storedDarkMode === 'true' || (!storedDarkMode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+      updateDarkModeIcon(true);
+  } else {
+      updateDarkModeIcon(false);
+  }
+
+  if (darkModeToggle) {
+      darkModeToggle.addEventListener('click', function() {
+          html.classList.toggle('dark');
+          const isDark = html.classList.contains('dark');
+          localStorage.setItem('theme-dark-mode', isDark);
+          updateDarkModeIcon(isDark);
+      });
+  }
+
   if (themePicker) {
     // If a palette is stored, apply it
     if (storedPalette) {
