@@ -1382,21 +1382,97 @@ body {
   border: none;
 }
 
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-list.nested {
+  padding-left: 16px;
+  border-left: 1px solid var(--md-sys-color-outline-variant);
+  margin-left: 12px;
+}
+
+.nav-item {
+  margin-bottom: 4px;
+}
+.nav-item details > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-item details > summary::-webkit-details-marker {
+  display: none;
+}
+.nav-item details > summary .nav-arrow {
+  fill: var(--md-sys-color-on-surface-variant);
+  transition: transform 0.2s ease;
+}
+.nav-item details[open] > summary .nav-arrow {
+  transform: rotate(180deg);
+}
+
 .nav-link {
   display: block;
   padding: 12px 16px;
   border-radius: 28px;
   color: var(--md-sys-color-on-surface-variant);
   font-weight: 500;
-  margin-bottom: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
 }
 .nav-link:hover {
   background-color: var(--md-sys-color-surface-variant);
-  text-decoration: none;
 }
 .nav-link.active {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
+  font-weight: 700;
+}
+
+.sidebar-search {
+  padding: 0 0 16px 0;
+}
+.sidebar-search input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 28px;
+  border: 1px solid var(--md-sys-color-outline);
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.sidebar-search input:focus {
+  outline: 2px solid var(--md-sys-color-primary);
+  border-color: transparent;
+}
+.sidebar-search .search-results {
+  margin-top: 8px;
+  background: var(--md-sys-color-surface-container-high);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sidebar-search .search-results:empty {
+  display: none;
+}
+.sidebar-search .search-results a {
+  display: block;
+  padding: 8px 12px;
+  color: var(--md-sys-color-on-surface);
+  text-decoration: none;
+  font-size: 13px;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+.sidebar-search .search-results a:last-child {
+  border-bottom: none;
+}
+.sidebar-search .search-results a:hover {
+  background-color: var(--md-sys-color-surface-variant);
 }
 
 table {

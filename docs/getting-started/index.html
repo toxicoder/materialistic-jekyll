@@ -22,7 +22,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Materialistic Jekyll Theme" /></head>
-<body><header class="app-bar">
+<!-- Extra CSS -->
+  
+    
+  
+
+  <body><header class="app-bar">
   <button id="menu-toggle" class="btn btn-outlined" style="margin-right: 16px; display: none;" aria-label="Toggle navigation">
     <span style="font-size: 20px;">☰</span>
   </button>
@@ -32,35 +37,142 @@
   <div style="flex: 1;"></div>
 </header>
 <div class="main-container"><nav class="sidebar">
-  <div style="padding-bottom: 16px;">
+  <div class="sidebar-header" style="padding-bottom: 16px;">
     <strong>Navigation</strong>
   </div>
+
+  <div class="sidebar-search">
+    <input type="text" id="search-input" placeholder="Search docs..." aria-label="Search documentation">
+    <div id="search-results" class="search-results"></div>
+  </div>
+
   
-    
-      <a class="nav-link " href="/configuration/">
-        Configuration
-      </a>
-    
+    <ul class="nav-list">
+      
+        
+
+<li class="nav-item">
   
-    
-      <a class="nav-link active" href="/getting-started/">
-        Getting Started
-      </a>
-    
+    <a class="nav-link " href="/docs/">
+      Home
+    </a>
   
-    
-      <a class="nav-link " href="/">
-        Home
-      </a>
-    
+</li>
+
+      
+        
+
+<li class="nav-item">
   
-    
+    <a class="nav-link " href="/docs/high-level-features/">
+      High-Level Features
+    </a>
   
-    
+</li>
+
+      
+        
+
+<li class="nav-item">
   
-    
+    <details >
+      <summary class="nav-link">
+        Configuration Options
+        <svg class="nav-arrow" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </summary>
+      <ul class="nav-list nested">
+        
+          
+
+<li class="nav-item">
   
-    
+    <a class="nav-link " href="/docs/configuration/project-information/">
+      Project Information
+    </a>
+  
+</li>
+
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/docs/configuration/advanced/">
+      Advanced Settings
+    </a>
+  
+</li>
+
+        
+      </ul>
+    </details>
+  
+</li>
+
+      
+        
+
+<li class="nav-item">
+  
+    <details >
+      <summary class="nav-link">
+        API Reference
+        <svg class="nav-arrow" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </summary>
+      <ul class="nav-list nested">
+        
+          
+
+<li class="nav-item">
+  
+    <details >
+      <summary class="nav-link">
+        Endpoints
+        <svg class="nav-arrow" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </summary>
+      <ul class="nav-list nested">
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/docs/api/users/">
+      Users
+    </a>
+  
+</li>
+
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/docs/api/posts/">
+      Posts
+    </a>
+  
+</li>
+
+        
+      </ul>
+    </details>
+  
+</li>
+
+        
+      </ul>
+    </details>
+  
+</li>
+
+      
+    </ul>
   
 </nav>
 <main class="content" aria-label="Content">
@@ -109,6 +221,12 @@
   </div>
 </footer>
 <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/search.js"></script>
+
+    <!-- Extra JS -->
+    
+      
+    
 
   </body>
 
