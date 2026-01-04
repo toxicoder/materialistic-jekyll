@@ -1,6 +1,6 @@
 title: Materialistic Jekyll Theme
 description: A Material Design 3 Jekyll theme for technical documentation.
-baseurl: /materialistic-jekyll
+baseurl: ""
 url: https://toxicoder.github.io
 
 theme_settings:
