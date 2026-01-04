@@ -8,19 +8,11 @@ permalink: /getting-started/
 
 ## Installation
 
-1. Add the theme to your `Gemfile`:
+This theme is designed to be used as a template.
 
-   ```ruby
-   gem "material-tech-theme"
-   ```
-
-2. Add the theme to your `_config.yml`:
-
-   ```yaml
-   theme: material-tech-theme
-   ```
-
-3. Run `bundle install`.
+1. **Fork the repository** or click the "Use this template" button on GitHub.
+2. Clone your new repository locally.
+3. Run `bundle install` to install dependencies.
 
 ## Usage
 

@@ -16,4 +16,3 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - generate_palettes.py
