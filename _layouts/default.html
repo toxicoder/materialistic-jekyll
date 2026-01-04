@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="{{ page.palette | default: site.theme_settings.palette | default: 'palette-1' }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <div class="main-container">
+      {%- if page.layout == "doc" or layout.layout == "doc" -%}
+        {%- include sidebar.html -%}
+      {%- endif -%}
+
+      <main class="content" aria-label="Content">
+        {{ content }}
+      </main>
+    </div>
+
+    {%- include footer.html -%}
+
+    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,108 @@
+// Layout System
+
+body {
+  margin: 0;
+  background-color: var(--md-sys-color-background);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-bar {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: var(--md-sys-elevation-level-2);
+  z-index: 10;
+  position: sticky;
+  top: 0;
+
+  .title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  // Show menu button on mobile
+  @include media-query(mobile) {
+    #menu-toggle {
+      display: inline-flex !important;
+      border: none;
+      padding: 0;
+      width: 48px;
+      height: 48px;
+      justify-content: center;
+      color: var(--md-sys-color-on-surface);
+    }
+  }
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: var(--md-sys-color-surface);
+  border-right: 1px solid var(--md-sys-color-outline);
+  padding: 16px;
+  overflow-y: auto;
+  height: calc(100vh - 64px);
+  position: sticky;
+  top: 64px;
+  transition: transform 0.3s ease;
+
+  @include media-query(mobile) {
+    position: fixed;
+    z-index: 20;
+    height: calc(100vh - 64px); // Adjust for header
+    top: 64px;
+    left: 0;
+    box-shadow: var(--md-sys-elevation-level-3);
+    transform: translateX(-100%); // Hidden by default
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+// Overlay for mobile when sidebar is open
+.sidebar-overlay {
+  display: none;
+  @include media-query(mobile) {
+    &.active {
+      display: block;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 15;
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 32px;
+  max-width: 900px; // Optimal reading width
+
+  @include media-query(mobile) {
+    padding: 16px;
+  }
+}
+
+.footer {
+  padding: 32px;
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  text-align: center;
+}
