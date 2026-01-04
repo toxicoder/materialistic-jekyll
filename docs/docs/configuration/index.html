@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Getting Started | Materialistic Jekyll Theme</title>
+<title>Configuration | Materialistic Jekyll Theme</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Getting Started" />
+<meta property="og:title" content="Configuration" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A Material Design 3 Jekyll theme for technical documentation." />
 <meta property="og:description" content="A Material Design 3 Jekyll theme for technical documentation." />
-<link rel="canonical" href="https://toxicoder.github.io/getting-started/" />
-<meta property="og:url" content="https://toxicoder.github.io/getting-started/" />
+<link rel="canonical" href="https://toxicoder.github.io/docs/configuration/" />
+<meta property="og:url" content="https://toxicoder.github.io/docs/configuration/" />
 <meta property="og:site_name" content="Materialistic Jekyll Theme" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Getting Started" />
+<meta property="twitter:title" content="Configuration" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A Material Design 3 Jekyll theme for technical documentation.","headline":"Getting Started","url":"https://toxicoder.github.io/getting-started/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"A Material Design 3 Jekyll theme for technical documentation.","headline":"Configuration","url":"https://toxicoder.github.io/docs/configuration/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +55,17 @@
   
     <a class="nav-link " href="/docs/">
       Home
+    </a>
+  
+</li>
+
+      
+        
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/docs/getting-started/">
+      Getting Started
     </a>
   
 </li>
@@ -179,36 +190,30 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Getting Started</h1>
+    <h1 class="post-title">Configuration</h1>
   </header>
 
   <div class="post-content">
-    <h1 id="getting-started">Getting Started</h1>
+    <h1 id="configuration">Configuration</h1>
 
-<h2 id="installation">Installation</h2>
+<h2 id="color-palettes">Color Palettes</h2>
 
-<p>This theme is designed to be used as a template.</p>
+<p>Materialistic Jekyll Theme comes with 50 pre-generated color palettes. You can set the global palette in <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
 
-<ol>
-  <li><strong>Fork the repository</strong> or click the “Use this template” button on GitHub.</li>
-  <li>Clone your new repository locally.</li>
-  <li>Run <code class="language-plaintext highlighter-rouge">bundle install</code> to install dependencies.</li>
-</ol>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme_settings</span><span class="pi">:</span>
+  <span class="na">palette</span><span class="pi">:</span> <span class="s2">"</span><span class="s">palette-1"</span>
+</code></pre></div></div>
 
-<h2 id="usage">Usage</h2>
-
-<p>Create your markdown files and specify the layout in the front matter.</p>
+<p>Or override it per page:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">doc</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s">My Documentation</span>
+<span class="na">palette</span><span class="pi">:</span> <span class="s2">"</span><span class="s">palette-10"</span>
 <span class="nn">---</span>
 </code></pre></div></div>
 
-<h2 id="running-locally">Running Locally</h2>
+<h2 id="navigation">Navigation</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
-</code></pre></div></div>
+<p>The sidebar navigation is automatically generated based on the pages in your project.</p>
 
   </div>
 

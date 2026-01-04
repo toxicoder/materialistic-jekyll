@@ -11,7 +11,7 @@
     
     {
       "title": "Configuration",
-      "url": "/configuration/",
+      "url": "/docs/configuration/",
       "content": "ConfigurationColor PalettesMaterialistic Jekyll Theme comes with 50 pre-generated color palettes. You can set the global palette in _config.yml:theme_settings:  palette: &quot;palette-1&quot;Or override it per page:---palette: &quot;palette-10&quot;---NavigationThe sidebar navigation is automatically generated based on the pages in your project."
     },
     
@@ -19,7 +19,7 @@
     
     {
       "title": "Getting Started",
-      "url": "/getting-started/",
+      "url": "/docs/getting-started/",
       "content": "Getting StartedInstallationThis theme is designed to be used as a template.  Fork the repository or click the “Use this template” button on GitHub.  Clone your new repository locally.  Run bundle install to install dependencies.UsageCreate your markdown files and specify the layout in the front matter.---layout: doctitle: My Documentation---Running Locallybundle exec jekyll serve"
     },
     
