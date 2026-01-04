@@ -1,5 +1,6 @@
 ---
 title: Project Information
+permalink: /docs/configuration/project-information/
 ---
 
 # Project Information
