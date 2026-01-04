@@ -5,23 +5,23 @@
 {% endcomment %}
 
 <li class="nav-item">
-  {% if item.children %}
-    <details {% if page.url contains item.url %}open{% endif %}>
+  {% if include.item.children %}
+    <details {% if page.url contains include.item.url %}open{% endif %}>
       <summary class="nav-link">
-        {{ item.title }}
+        {{ include.item.title }}
         <svg class="nav-arrow" viewBox="0 0 24 24" width="24" height="24">
           <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
         </svg>
       </summary>
       <ul class="nav-list nested">
-        {% for child in item.children %}
+        {% for child in include.item.children %}
           {% include nav_item.html item=child %}
         {% endfor %}
       </ul>
     </details>
   {% else %}
-    <a class="nav-link {% if page.url == item.url %}active{% endif %}" href="{{ item.url | relative_url }}">
-      {{ item.title }}
+    <a class="nav-link {% if page.url == include.item.url %}active{% endif %}" href="{{ include.item.url | relative_url }}">
+      {{ include.item.title }}
     </a>
   {% endif %}
 </li>
