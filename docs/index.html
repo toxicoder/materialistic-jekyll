@@ -32,19 +32,95 @@
   <div style="flex: 1;"></div>
 </header>
 <div class="main-container"><main class="content" aria-label="Content">
-        <div class="home"><h1 class="page-heading">Home</h1><h1 id="materialistic-jekyll-theme">Materialistic Jekyll Theme</h1>
+        <div class="home"><h1 class="page-heading">Home</h1><h1 class="display-small" id="materialistic-jekyll-theme">Materialistic Jekyll Theme</h1>
 
-<p>Welcome to the documentation for <strong>Materialistic Jekyll Theme</strong>, a Material Design 3 theme for technical documentation.</p>
+<p class="headline-small"><strong>A stunning Material Design 3 theme for your technical documentation.</strong></p>
 
-<h2 id="key-features">Key Features</h2>
+<p><a href="/getting-started/" class="btn btn-primary">Get Started</a> <a href="/configuration/" class="btn btn-outlined">Configuration</a></p>
 
-<ul>
-  <li><strong>Material Design 3</strong>: Fully compliant with Material You design specs.</li>
-  <li><strong>50 Premade Color Palettes</strong>: Easily switch between 50 diverse color schemes.</li>
-  <li><strong>Developer Optimized</strong>: Typography, code highlighting, and layout optimized for technical docs.</li>
-</ul>
+<hr />
 
-<p><a href="/getting-started/" class="btn btn-primary">Get Started</a></p>
+<h2 id="typography">Typography</h2>
+
+<h1>Display Large</h1>
+<h2>Headline Large</h2>
+<h3>Title Large</h3>
+<h4>Label Large</h4>
+<h5>Body Large</h5>
+
+<p>The theme uses a responsive type scale that adapts to any screen size. Text is legible, comfortable, and beautiful.</p>
+
+<h2 id="components">Components</h2>
+
+<h3 id="buttons">Buttons</h3>
+
+<p><a href="#" class="btn btn-primary">Primary Button</a>
+<a href="#" class="btn btn-outlined">Outlined Button</a></p>
+
+<h3 id="cards">Cards</h3>
+
+<div class="card elevated">
+  <h3>Elevated Card</h3>
+  <p>This card sits above the surface with a subtle shadow.</p>
+</div>
+
+<div class="card filled">
+  <h3>Filled Card</h3>
+  <p>This card uses a surface variant color to distinguish itself.</p>
+</div>
+
+<div class="card">
+  <h3>Outlined Card</h3>
+  <p>The default card style with a border.</p>
+</div>
+
+<h2 id="data-display">Data Display</h2>
+
+<h3 id="tables">Tables</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Component</th>
+      <th style="text-align: left">Status</th>
+      <th style="text-align: left">Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Buttons</strong></td>
+      <td style="text-align: left">Stable</td>
+      <td style="text-align: left">High</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Cards</strong></td>
+      <td style="text-align: left">Stable</td>
+      <td style="text-align: left">Medium</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Navigation</strong></td>
+      <td style="text-align: left">Beta</td>
+      <td style="text-align: left">Low</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="code-blocks">Code Blocks</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Hello, Material Design 3!</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="color-system">Color System</h2>
+
+<p>The theme comes with <strong>50 pre-generated color palettes</strong>. Change the <code class="language-plaintext highlighter-rouge">palette</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code> to instantly transform the look of your site.</p>
+
+<div style="display: flex; gap: 16px; flex-wrap: wrap;">
+  <div style="background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); padding: 24px; border-radius: 16px;">Primary</div>
+  <div style="background: var(--md-sys-color-secondary); color: var(--md-sys-color-on-secondary); padding: 24px; border-radius: 16px;">Secondary</div>
+  <div style="background: var(--md-sys-color-tertiary); color: var(--md-sys-color-on-tertiary); padding: 24px; border-radius: 16px;">Tertiary</div>
+  <div style="background: var(--md-sys-color-error); color: var(--md-sys-color-on-error); padding: 24px; border-radius: 16px;">Error</div>
+</div>
 
 
   
