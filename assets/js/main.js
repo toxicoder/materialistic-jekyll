@@ -20,5 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  console.log('Material Tech Theme Loaded');
+  console.log('Materialistic Jekyll Theme Loaded');
 });
