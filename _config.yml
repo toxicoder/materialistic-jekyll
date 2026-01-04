@@ -4,7 +4,7 @@ baseurl: "/materialistic-jekyll"
 url: https://toxicoder.github.io
 
 theme_settings:
-  palette: "palette-1" # Default palette (1-50)
+  palette: "palette-25" # Default palette (1-50)
 
 markdown: kramdown
 permalink: pretty
