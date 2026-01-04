@@ -41,6 +41,11 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          # A Personal Access Token (PAT) with 'repo' or 'administration:write' permission is required to enable Pages programmatically.
+          # Create a PAT and add it as a secret named GH_PAT in the repository settings.
+          token: ${{ secrets.GH_PAT }}
+          enablement: true
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
