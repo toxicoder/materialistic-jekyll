@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Configuration
-permalink: /configuration/
+permalink: /docs/configuration/
 ---
 
 # Configuration

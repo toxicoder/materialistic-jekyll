@@ -1,6 +1,8 @@
 docs:
   - title: Home
     url: /docs/
+  - title: Getting Started
+    url: /docs/getting-started/
   - title: High-Level Features
     url: /docs/high-level-features/
   - title: Configuration Options
