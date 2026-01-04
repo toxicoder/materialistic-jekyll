@@ -1,4 +1,4 @@
-# Material Tech Jekyll Theme
+# Materialistic Jekyll Theme
 
 A Jekyll theme for technical documentation built with the latest Google Material Design 3 specifications.
 
