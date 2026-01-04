@@ -37,6 +37,18 @@ body {
       color: var(--md-sys-color-on-surface);
     }
   }
+
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 16px;
+
+    .btn-control {
+      height: 40px;
+      border-color: var(--md-sys-color-outline);
+    }
+  }
 }
 
 .main-container {

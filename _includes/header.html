@@ -6,12 +6,17 @@
     <a href="{{ "/" | relative_url }}" style="color: inherit;">{{ site.title | escape }}</a>
   </div>
   <div style="flex: 1;"></div>
-  <select id="theme-picker" class="btn btn-outlined" style="margin-left: 16px; height: 40px; border-color: var(--md-sys-color-outline);">
-    <option value="palette-1">Purple</option>
-    <option value="palette-25">Deep Blue</option>
-    <option value="palette-16">Red</option>
-    <option value="palette-9">Teal</option>
-    <option value="palette-6">Gold</option>
-    <option value="palette-30">Pink</option>
-  </select>
+  <div class="nav-controls">
+    <select id="theme-picker" class="btn btn-outlined btn-control">
+      <option value="palette-1">Purple</option>
+      <option value="palette-25">Deep Blue</option>
+      <option value="palette-16">Red</option>
+      <option value="palette-9">Teal</option>
+      <option value="palette-6">Gold</option>
+      <option value="palette-30">Pink</option>
+    </select>
+    <button id="dark-mode-toggle" class="btn btn-outlined btn-control" aria-label="Toggle dark mode">
+      <span style="font-size: 20px;">☀</span>
+    </button>
+  </div>
 </header>
