@@ -9,8 +9,6 @@ docs:
     children:
       - title: Project Information
         url: /docs/configuration/project-information/
-      - title: Advanced Settings
-        url: /docs/configuration/advanced/
   - title: Components
     url: /docs/components/
     children:
@@ -22,11 +20,3 @@ docs:
         url: /docs/components/content/
       - title: Layout & Navigation
         url: /docs/components/layout/
-  - title: API Reference
-    children:
-      - title: Endpoints
-        children:
-          - title: Users
-            url: /docs/api/users/
-          - title: Posts
-            url: /docs/api/posts/
