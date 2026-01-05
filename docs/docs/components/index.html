@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" class="palette-25"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Material 3 Components | Materialistic Jekyll Theme</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Material 3 Components" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Material Design 3 Jekyll theme for technical documentation." />
+<meta property="og:description" content="A Material Design 3 Jekyll theme for technical documentation." />
+<link rel="canonical" href="https://toxicoder.github.io/materialistic-jekyll/docs/components/" />
+<meta property="og:url" content="https://toxicoder.github.io/materialistic-jekyll/docs/components/" />
+<meta property="og:site_name" content="Materialistic Jekyll Theme" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Material 3 Components" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A Material Design 3 Jekyll theme for technical documentation.","headline":"Material 3 Components","url":"https://toxicoder.github.io/materialistic-jekyll/docs/components/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/materialistic-jekyll/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="https://toxicoder.github.io/materialistic-jekyll/feed.xml" title="Materialistic Jekyll Theme" /></head>
+<!-- Extra CSS -->
+  
+    
+  
+
+  <body><header class="app-bar">
+  <button id="menu-toggle" class="btn btn-outlined" style="margin-right: 16px; display: none;" aria-label="Toggle navigation">
+    <span style="font-size: 20px;">☰</span>
+  </button>
+  <div class="title">
+    <a href="/materialistic-jekyll/" style="color: inherit;">Materialistic Jekyll Theme</a>
+  </div>
+  <div style="flex: 1;"></div>
+  <div class="nav-controls">
+    <select id="theme-picker" class="btn btn-outlined btn-control">
+      
+      <option value="palette-1">Purple</option>
+      
+      <option value="palette-2">Red 2</option>
+      
+      <option value="palette-3">Red 3</option>
+      
+      <option value="palette-4">Red 4</option>
+      
+      <option value="palette-5">Orange 5</option>
+      
+      <option value="palette-6">Gold</option>
+      
+      <option value="palette-7">Green 7</option>
+      
+      <option value="palette-8">Green 8</option>
+      
+      <option value="palette-9">Teal</option>
+      
+      <option value="palette-10">Cyan 10</option>
+      
+      <option value="palette-11">Blue 11</option>
+      
+      <option value="palette-12">Blue 12</option>
+      
+      <option value="palette-13">Blue 13</option>
+      
+      <option value="palette-14">Purple 14</option>
+      
+      <option value="palette-15">Red 15</option>
+      
+      <option value="palette-16">Red</option>
+      
+      <option value="palette-17">Red 17</option>
+      
+      <option value="palette-18">Orange 18</option>
+      
+      <option value="palette-19">Orange 19</option>
+      
+      <option value="palette-20">Yellow 20</option>
+      
+      <option value="palette-21">Green 21</option>
+      
+      <option value="palette-22">Cyan 22</option>
+      
+      <option value="palette-23">Cyan 23</option>
+      
+      <option value="palette-24">Blue 24</option>
+      
+      <option value="palette-25">Deep Blue</option>
+      
+      <option value="palette-26">Blue 26</option>
+      
+      <option value="palette-27">Blue 27</option>
+      
+      <option value="palette-28">Purple 28</option>
+      
+      <option value="palette-29">Pink 29</option>
+      
+      <option value="palette-30">Pink</option>
+      
+      <option value="palette-31">Red 31</option>
+      
+      <option value="palette-32">Red 32</option>
+      
+      <option value="palette-33">Orange 33</option>
+      
+      <option value="palette-34">Orange 34</option>
+      
+      <option value="palette-35">Yellow 35</option>
+      
+      <option value="palette-36">Green 36</option>
+      
+      <option value="palette-37">Green 37</option>
+      
+      <option value="palette-38">Green 38</option>
+      
+      <option value="palette-39">Cyan 39</option>
+      
+      <option value="palette-40">Cyan 40</option>
+      
+      <option value="palette-41">Blue 41</option>
+      
+      <option value="palette-42">Blue 42</option>
+      
+      <option value="palette-43">Blue 43</option>
+      
+      <option value="palette-44">Purple 44</option>
+      
+      <option value="palette-45">Pink 45</option>
+      
+      <option value="palette-46">Red 46</option>
+      
+      <option value="palette-47">Red 47</option>
+      
+      <option value="palette-48">Red 48</option>
+      
+      <option value="palette-49">Orange 49</option>
+      
+      <option value="palette-50">Orange 50</option>
+      
+    </select>
+    <button id="dark-mode-toggle" class="btn btn-outlined btn-control" aria-label="Toggle dark mode">
+      <span style="font-size: 20px;">☀</span>
+    </button>
+  </div>
+</header>
+<div class="main-container"><main class="content" aria-label="Content">
+        <h1 id="material-3-components">Material 3 Components</h1>
+
+<p>This page demonstrates the implementation of Material 3 components in this theme.
+Most components are implemented as CSS classes that can be applied to HTML elements.</p>
+
+<h2 id="buttons">Buttons</h2>
+
+<h3 id="extended-types">Extended Types</h3>
+
+<p><strong>Elevated Button</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-elevated"</span><span class="nt">&gt;</span>Elevated<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<p><button class="btn btn-elevated">Elevated</button></p>
+
+<p><strong>Tonal Button</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-tonal"</span><span class="nt">&gt;</span>Tonal<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<p><button class="btn btn-tonal">Tonal</button></p>
+
+<p><strong>Text Button</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-text"</span><span class="nt">&gt;</span>Text Button<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<p><button class="btn btn-text">Text Button</button></p>
+
+<h3 id="fab">FAB</h3>
+
+<p><strong>Standard FAB</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fab"</span><span class="nt">&gt;</span>+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<p><button class="fab" style="font-size:24px;line-height:1">+</button></p>
+
+<p><strong>Small FAB</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fab fab-small"</span><span class="nt">&gt;</span>+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<p><button class="fab fab-small" style="font-size:20px;line-height:1">+</button></p>
+
+<p><strong>Large FAB</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fab fab-large"</span><span class="nt">&gt;</span>+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<p><button class="fab fab-large" style="font-size:36px;line-height:1">+</button></p>
+
+<p><strong>Extended FAB</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"fab-extended"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>+<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Create<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<p><button class="fab-extended">
+  <span style="font-size:24px;line-height:1">+</span>
+  <span>Create</span>
+</button></p>
+
+<h3 id="icon-buttons">Icon Buttons</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"icon-btn"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>★<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"icon-btn filled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>★<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"icon-btn tonal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>★<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"icon-btn outlined"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>★<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+<div style="display:flex; gap:8px;">
+<button class="icon-btn">★</button>
+<button class="icon-btn filled">★</button>
+<button class="icon-btn tonal">★</button>
+<button class="icon-btn outlined">★</button>
+</div>
+
+<h3 id="segmented-buttons">Segmented Buttons</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"segmented-btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"segmented-btn selected"</span><span class="nt">&gt;</span>Day<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"segmented-btn"</span><span class="nt">&gt;</span>Week<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"segmented-btn"</span><span class="nt">&gt;</span>Month<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="segmented-btn-group">
+  <button class="segmented-btn selected">Day</button>
+  <button class="segmented-btn">Week</button>
+  <button class="segmented-btn">Month</button>
+</div>
+
+<h2 id="inputs--controls">Inputs &amp; Controls</h2>
+
+<h3 id="text-fields">Text Fields</h3>
+
+<p><strong>Filled</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-field"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Label"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="text-field">
+  <input type="text" placeholder="Label" />
+</div>
+
+<p><strong>Outlined</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-field outlined"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Label"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="text-field outlined">
+  <input type="text" placeholder="Label" />
+</div>
+
+<h3 id="selection-controls">Selection Controls</h3>
+
+<p><strong>Checkbox</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox-wrapper"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Checked<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox-wrapper"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Unchecked<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+</code></pre></div></div>
+<p><label class="checkbox-wrapper">
+  <input type="checkbox" checked="" />
+  <span>Checked</span>
+</label>
+<label class="checkbox-wrapper">
+  <input type="checkbox" />
+  <span>Unchecked</span>
+</label></p>
+
+<p><strong>Radio</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"radio-wrapper"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"demo-radio"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Option 1<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"radio-wrapper"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"demo-radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Option 2<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+</code></pre></div></div>
+<p><label class="radio-wrapper">
+  <input type="radio" name="demo-radio" checked="" />
+  <span>Option 1</span>
+</label>
+<label class="radio-wrapper">
+  <input type="radio" name="demo-radio" />
+  <span>Option 2</span>
+</label></p>
+
+<p><strong>Switch</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"switch"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"slider-track"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"switch"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"slider-track"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/label&gt;</span>
+</code></pre></div></div>
+<p><label class="switch">
+  <input type="checkbox" checked="" />
+  <span class="slider-track"></span>
+</label>
+<label class="switch">
+  <input type="checkbox" />
+  <span class="slider-track"></span>
+</label></p>
+
+<p><strong>Slider</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slider"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"50"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="slider">
+  <input type="range" min="0" max="100" value="50" />
+</div>
+
+<h2 id="content--display">Content &amp; Display</h2>
+
+<h3 id="cards">Cards</h3>
+
+<p><strong>Elevated Card</strong></p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is an elevated card.
+{: .card .card-elevated }
+</code></pre></div></div>
+<div class="card card-elevated">
+  This is an elevated card.
+</div>
+
+<p><strong>Filled Card</strong></p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is a filled card.
+{: .card .card-filled }
+</code></pre></div></div>
+<div class="card card-filled">
+  This is a filled card.
+</div>
+
+<p><strong>Outlined Card</strong></p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is an outlined card.
+{: .card .card-outlined }
+</code></pre></div></div>
+<div class="card card-outlined">
+  This is an outlined card.
+</div>
+
+<h3 id="lists">Lists</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"leading-element avatar"</span><span class="nt">&gt;</span>A<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list-item-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-headline"</span><span class="nt">&gt;</span>Headline<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-supporting-text"</span><span class="nt">&gt;</span>Supporting text<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"trailing-element"</span><span class="nt">&gt;</span>10m<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"leading-element avatar"</span><span class="nt">&gt;</span>B<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list-item-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-headline"</span><span class="nt">&gt;</span>Headline 2<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-supporting-text"</span><span class="nt">&gt;</span>Supporting text 2<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"trailing-element"</span><span class="nt">&gt;</span>5m<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+<ul class="list">
+  <li class="list-item">
+    <span class="leading-element avatar">A</span>
+    <div class="list-item-content">
+      <span class="list-item-headline">Headline</span>
+      <span class="list-item-supporting-text">Supporting text</span>
+    </div>
+    <span class="trailing-element">10m</span>
+  </li>
+  <li class="list-item divider"></li>
+  <li class="list-item">
+    <span class="leading-element avatar">B</span>
+    <div class="list-item-content">
+      <span class="list-item-headline">Headline 2</span>
+      <span class="list-item-supporting-text">Supporting text 2</span>
+    </div>
+    <span class="trailing-element">5m</span>
+  </li>
+</ul>
+
+<h3 id="chips">Chips</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Assist
+{: .chip }
+
+Filter
+{: .chip .filled }
+
+Input
+{: .chip .elevated }
+</code></pre></div></div>
+<p><span class="chip">Assist</span>
+<span class="chip filled">Filter</span>
+<span class="chip elevated">Input</span></p>
+
+<h3 id="badge">Badge</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge small"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+<p><span class="badge">3</span>
+<span class="badge small"></span></p>
+
+<h3 id="tooltip">Tooltip</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tooltip"</span> <span class="na">data-tooltip=</span><span class="s">"This is a tooltip"</span><span class="nt">&gt;</span>Hover me<span class="nt">&lt;/span&gt;</span>
+</code></pre></div></div>
+<p><span class="tooltip" data-tooltip="This is a tooltip">Hover me</span></p>
+
+<h3 id="progress-indicators">Progress Indicators</h3>
+
+<p><strong>Linear</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-linear"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="progress-linear"></div>
+
+<p><strong>Circular</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-circular"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="progress-circular"></div>
+
+<h3 id="dialog">Dialog</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dialog-headline"</span><span class="nt">&gt;</span>Dialog Title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dialog-content"</span><span class="nt">&gt;</span>
+    This is a basic dialog example showing the structure.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dialog-actions"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-text"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-text"</span><span class="nt">&gt;</span>OK<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="dialog">
+  <div class="dialog-headline">Dialog Title</div>
+  <div class="dialog-content">
+    This is a basic dialog example showing the structure.
+  </div>
+  <div class="dialog-actions">
+    <button class="btn btn-text">Cancel</button>
+    <button class="btn btn-text">OK</button>
+  </div>
+</div>
+
+<h3 id="menu">Menu</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>Item 1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>Item 2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>Item 3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="menu">
+  <div class="menu-item">Item 1</div>
+  <div class="menu-item">Item 2</div>
+  <div class="menu-item">Item 3</div>
+</div>
+
+<h2 id="navigation">Navigation</h2>
+
+<h3 id="tabs">Tabs</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-item active"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="tabs">
+  <div class="tab-item active">Tab 1</div>
+  <div class="tab-item">Tab 2</div>
+  <div class="tab-item">Tab 3</div>
+</div>
+
+<h3 id="navigation-rail-demo">Navigation Rail (Demo)</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-rail"</span> <span class="na">style=</span><span class="s">"height: 300px; display:inline-flex;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-rail-item active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>●<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>One<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-rail-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>○<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="nav-rail" style="height: 300px; display:inline-flex;">
+  <div class="nav-rail-item active">
+    <span class="icon">●</span>
+    <span class="label">One</span>
+  </div>
+  <div class="nav-rail-item">
+    <span class="icon">○</span>
+    <span class="label">Two</span>
+  </div>
+</div>
+
+<h3 id="bottom-sheet-demo">Bottom Sheet (Demo)</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bottom-sheet"</span> <span class="na">style=</span><span class="s">"position:relative; transform:none; left:auto; bottom:auto;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"drag-handle"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sheet-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Bottom sheet content goes here.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="bottom-sheet" style="position:relative; transform:none; left:auto; bottom:auto;">
+  <div class="drag-handle"></div>
+  <div class="sheet-content">
+    <p>Bottom sheet content goes here.</p>
+  </div>
+</div>
+
+      </main>
+    </div><footer class="footer">
+  <div class="wrapper">
+    <p>Materialistic Jekyll Theme &copy; 2026</p>
+  </div>
+</footer>
+<script src="/materialistic-jekyll/assets/js/main.js"></script>
+    <script src="/materialistic-jekyll/assets/js/search.js"></script>
+
+    <!-- Extra JS -->
+    
+      
+    
+
+  </body>
+
+</html>
