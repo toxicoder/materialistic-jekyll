@@ -6,6 +6,8 @@ permalink: /docs/configuration/
 
 # Configuration
 
+<div class="card card-outlined" markdown="1">
+
 ## Color Palettes
 
 Materialistic Jekyll Theme comes with 50 pre-generated color palettes. You can set the global palette in `_config.yml`:
@@ -22,6 +24,8 @@ Or override it per page:
 palette: "palette-10"
 ---
 ```
+
+</div>
 
 ## Navigation
 
