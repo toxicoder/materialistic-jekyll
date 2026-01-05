@@ -11,6 +11,17 @@ docs:
         url: /docs/configuration/project-information/
       - title: Advanced Settings
         url: /docs/configuration/advanced/
+  - title: Components
+    url: /docs/components/
+    children:
+      - title: Buttons
+        url: /docs/components/buttons/
+      - title: Inputs & Controls
+        url: /docs/components/inputs/
+      - title: Content & Display
+        url: /docs/components/content/
+      - title: Layout & Navigation
+        url: /docs/components/layout/
   - title: API Reference
     children:
       - title: Endpoints
