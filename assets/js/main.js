@@ -21,69 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Theme Picker Logic
-  const themePicker = document.getElementById('theme-picker');
-  const html = document.documentElement;
-  const storedPalette = localStorage.getItem('theme-palette');
-
-  // Dark Mode Logic
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
-  const storedDarkMode = localStorage.getItem('theme-dark-mode');
-
-  function updateDarkModeIcon(isDark) {
-      if (!darkModeToggle) return;
-      const span = darkModeToggle.querySelector('span');
-      if (span) {
-          span.textContent = isDark ? '☾' : '☀';
-      }
-  }
-
-  // Init Dark Mode
-  if (storedDarkMode === 'true' || (!storedDarkMode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      html.classList.add('dark');
-      updateDarkModeIcon(true);
-  } else {
-      updateDarkModeIcon(false);
-  }
-
-  if (darkModeToggle) {
-      darkModeToggle.addEventListener('click', function() {
-          html.classList.toggle('dark');
-          const isDark = html.classList.contains('dark');
-          localStorage.setItem('theme-dark-mode', isDark);
-          updateDarkModeIcon(isDark);
-      });
-  }
-
-  if (themePicker) {
-    // If a palette is stored, apply it
-    if (storedPalette) {
-      // Remove existing palette classes
-      const classes = html.className.split(' ').filter(c => !c.startsWith('palette-'));
-      html.className = classes.join(' ') + ' ' + storedPalette;
-
-      // Update picker value
-      themePicker.value = storedPalette;
-    } else {
-      // If no stored palette, sync picker with current html class (server-side default)
-      const currentPalette = html.className.split(' ').find(c => c.startsWith('palette-'));
-      if (currentPalette) {
-        themePicker.value = currentPalette;
-      }
-    }
-
-    // Listen for changes
-    themePicker.addEventListener('change', function() {
-      const newPalette = this.value;
-
-      // Remove existing palette classes
-      const classes = html.className.split(' ').filter(c => !c.startsWith('palette-'));
-      html.className = classes.join(' ') + ' ' + newPalette;
-
-      // Save to localStorage
-      localStorage.setItem('theme-palette', newPalette);
-    });
-  }
+  // Theme Settings Logic (Dialog & Palettes)
+  initThemeSettings();
 
   // Auto-expand Sidebar
   const activeLink = document.querySelector('.nav-link.active');
@@ -216,3 +155,101 @@ function initMaterialComponents() {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', initMaterialComponents);
+
+function initThemeSettings() {
+  const settingsBtn = document.getElementById('theme-settings-btn');
+  const dialog = document.getElementById('theme-dialog');
+  const backdrop = document.getElementById('theme-backdrop');
+  const closeBtn = document.getElementById('close-theme-dialog');
+  const html = document.documentElement;
+
+  // Dialog Open/Close
+  function openDialog() {
+    if (dialog && backdrop) {
+      dialog.style.display = 'block';
+      backdrop.style.display = 'block';
+      // Force reflow
+      void dialog.offsetWidth;
+      dialog.style.opacity = '1';
+      backdrop.style.opacity = '1';
+    }
+  }
+
+  function closeDialog() {
+    if (dialog && backdrop) {
+      dialog.style.opacity = '0';
+      backdrop.style.opacity = '0';
+      setTimeout(() => {
+        dialog.style.display = 'none';
+        backdrop.style.display = 'none';
+      }, 200);
+    }
+  }
+
+  if (settingsBtn) settingsBtn.addEventListener('click', openDialog);
+  if (closeBtn) closeBtn.addEventListener('click', closeDialog);
+  if (backdrop) backdrop.addEventListener('click', closeDialog);
+
+  // Dark Mode
+  const darkModeSwitch = document.getElementById('dark-mode-switch');
+  const storedDarkMode = localStorage.getItem('theme-dark-mode');
+
+  function setDarkMode(isDark) {
+    if (isDark) {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+    if (darkModeSwitch) darkModeSwitch.checked = isDark;
+    localStorage.setItem('theme-dark-mode', isDark);
+  }
+
+  // Init Dark Mode
+  if (storedDarkMode === 'true' || (!storedDarkMode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    setDarkMode(true);
+  } else {
+    setDarkMode(false);
+  }
+
+  if (darkModeSwitch) {
+    darkModeSwitch.addEventListener('change', function() {
+      setDarkMode(this.checked);
+    });
+  }
+
+  // Palette Picker
+  const swatches = document.querySelectorAll('.palette-swatch');
+  const storedPalette = localStorage.getItem('theme-palette');
+
+  function setPalette(paletteId) {
+    // Remove existing palette classes
+    const classes = html.className.split(' ').filter(c => !c.startsWith('palette-'));
+    html.className = classes.join(' ') + ' ' + paletteId;
+
+    // Update selection UI
+    swatches.forEach(s => {
+      if (s.dataset.paletteId === paletteId) {
+        s.classList.add('selected');
+      } else {
+        s.classList.remove('selected');
+      }
+    });
+
+    localStorage.setItem('theme-palette', paletteId);
+  }
+
+  // Init Palette
+  let currentPalette = storedPalette;
+  if (!currentPalette) {
+    // Fallback to server-side default or first palette
+    const currentClass = html.className.split(' ').find(c => c.startsWith('palette-'));
+    currentPalette = currentClass || 'palette-25'; // Default Deep Blue
+  }
+  setPalette(currentPalette);
+
+  swatches.forEach(swatch => {
+    swatch.addEventListener('click', function() {
+      setPalette(this.dataset.paletteId);
+    });
+  });
+}

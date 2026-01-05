@@ -7,13 +7,9 @@
   </div>
   <div style="flex: 1;"></div>
   <div class="nav-controls">
-    <select id="theme-picker" class="btn btn-outlined btn-control">
-      {% for palette in site.data.palettes %}
-      <option value="{{ palette.id }}">{{ palette.name }}</option>
-      {% endfor %}
-    </select>
-    <button id="dark-mode-toggle" class="btn btn-outlined btn-control" aria-label="Toggle dark mode">
-      <span style="font-size: 20px;">☀</span>
+    <button id="theme-settings-btn" class="icon-btn outlined" aria-label="Theme Settings" style="margin-left: 8px;">
+      <span style="font-size: 20px;">🎨</span>
     </button>
+    {% include theme_dialog.html %}
   </div>
 </header>

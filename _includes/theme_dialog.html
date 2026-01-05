@@ -1,0 +1,29 @@
+<div id="theme-dialog" class="dialog modal" style="display: none; opacity: 0; transition: opacity 0.2s; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100;">
+  <h3 class="dialog-headline">Theme Settings</h3>
+  <div class="dialog-content">
+
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+      <span style="font-size: 16px; font-weight: 500;">Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-switch">
+        <span class="slider-track"></span>
+      </label>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <span style="font-size: 16px; font-weight: 500; display: block; margin-bottom: 12px;">Color Palette</span>
+      <div class="palette-grid">
+        {% for palette in site.data.palettes %}
+          <button class="palette-swatch" data-palette-id="{{ palette.id }}" aria-label="{{ palette.name }}" title="{{ palette.name }}" style="background-color: {{ palette.color }};">
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+  <div class="dialog-actions">
+    <button class="btn btn-text" id="close-theme-dialog">Close</button>
+  </div>
+</div>
+<!-- Backdrop -->
+<div id="theme-backdrop" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.32); z-index: 99; opacity: 0; transition: opacity 0.2s;"></div>
