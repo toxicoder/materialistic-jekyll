@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (searchInput) {
     // Fetch search data
-    fetch('/search.json')
+    const searchUrl = window.searchUrl || '/search.json';
+    fetch(searchUrl)
       .then(response => response.json())
       .then(data => {
         searchData = data;
