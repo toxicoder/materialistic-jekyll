@@ -849,3 +849,44 @@
     padding: 0 24px;
   }
 }
+
+// =============================================================================
+// Animations & Interactive States
+// =============================================================================
+
+// Ripple Effect
+.ripple-surface {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0); // Safari fix
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: currentColor;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+// Apply ripple surface to interactive components
+.btn { @extend .ripple-surface; }
+.fab { @extend .ripple-surface; }
+.icon-btn { @extend .ripple-surface; }
+.segmented-btn { @extend .ripple-surface; }
+.chip { @extend .ripple-surface; }
+.tab-item { @extend .ripple-surface; }
+.nav-rail-item { @extend .ripple-surface; }
+.list-item {
+    @extend .ripple-surface;
+    cursor: pointer; // Ensure pointer cursor for interactive lists
+}
