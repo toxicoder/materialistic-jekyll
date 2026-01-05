@@ -1,0 +1,851 @@
+// Material 3 Components Implementation
+// Follows specs from https://m3.material.io/components
+
+@import "mixins";
+
+// =============================================================================
+// Buttons
+// =============================================================================
+
+// Base button refinements are in _components.scss (primary, outlined)
+
+// Elevated Button
+.btn-elevated {
+  @extend .btn;
+  background-color: var(--md-sys-color-surface-container-low);
+  color: var(--md-sys-color-primary);
+  box-shadow: var(--md-sys-elevation-level-1);
+
+  &:hover {
+    box-shadow: var(--md-sys-elevation-level-2);
+    background-color: var(--md-sys-color-surface-container-low); // with opacity
+    // Since we don't have opacity mixins easily available for arbitrary vars, we rely on the shadow
+  }
+}
+
+// Tonal Button
+.btn-tonal {
+  @extend .btn;
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+
+  &:hover {
+    box-shadow: var(--md-sys-elevation-level-1);
+  }
+}
+
+// Text Button
+.btn-text {
+  @extend .btn;
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  padding: 0 12px; // Less padding for text buttons
+
+  &:hover {
+    background-color: rgba(var(--md-sys-color-primary), 0.08); // Fallback
+    background-color: var(--md-sys-color-surface-variant);
+  }
+}
+
+// Floating Action Button (FAB)
+.fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  box-shadow: var(--md-sys-elevation-level-3);
+  @include transition(box-shadow 0.2s, background-color 0.2s);
+
+  // Default (Medium)
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  font-size: 24px; // For icons
+
+  &:hover {
+    box-shadow: var(--md-sys-elevation-level-4);
+  }
+
+  &.fab-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 20px;
+  }
+
+  &.fab-large {
+    width: 96px;
+    height: 96px;
+    border-radius: 28px;
+    font-size: 36px;
+  }
+}
+
+.fab-extended {
+  @extend .fab;
+  width: auto;
+  height: 56px;
+  padding: 0 20px;
+  border-radius: 16px;
+  font-family: var(--md-sys-typeface-brand);
+  font-size: 14px;
+  font-weight: 500;
+  gap: 12px; // Space between icon and text
+
+  // If using material icons
+  .material-icons, .material-symbols-outlined {
+    font-size: 24px;
+  }
+}
+
+// Icon Buttons
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; // Standard target size
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+  cursor: pointer;
+  @include transition(background-color 0.2s);
+  font-size: 24px; // For icon font
+
+  &:hover {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface);
+  }
+
+  &.filled {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+
+    &:hover {
+      box-shadow: var(--md-sys-elevation-level-1);
+    }
+  }
+
+  &.tonal {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+
+    &:hover {
+      box-shadow: var(--md-sys-elevation-level-1);
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid var(--md-sys-color-outline);
+    color: var(--md-sys-color-on-surface);
+
+    &:hover {
+      background-color: var(--md-sys-color-surface-variant);
+    }
+  }
+}
+
+// Segmented Buttons
+.segmented-btn-group {
+  display: inline-flex;
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 20px; // Full pill radius
+  overflow: hidden;
+
+  .segmented-btn {
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid var(--md-sys-color-outline);
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 0 16px; // Adjust for content
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background-color: var(--md-sys-color-surface-variant);
+    }
+
+    &.selected {
+      background-color: var(--md-sys-color-secondary-container);
+      color: var(--md-sys-color-on-secondary-container);
+    }
+  }
+}
+
+// =============================================================================
+// Inputs & Controls
+// =============================================================================
+
+// Text Field
+.text-field {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: 8px 16px;
+    height: 56px;
+    border-radius: 4px 4px 0 0;
+    border: none;
+    border-bottom: 1px solid var(--md-sys-color-outline);
+    background-color: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface);
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-bottom-color 0.2s, background-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid var(--md-sys-color-primary);
+      background-color: var(--md-sys-color-surface-container-high);
+    }
+
+    &::placeholder {
+      color: var(--md-sys-color-on-surface-variant);
+      opacity: 0.8;
+    }
+  }
+
+  // Label animation can be added if we wrap input and label,
+  // but keeping it simple for markdown usage where wrapping might be hard.
+  // The placeholder serves as label for simple usage.
+
+  &.outlined {
+    input {
+      background-color: transparent;
+      border: 1px solid var(--md-sys-color-outline);
+      border-radius: 4px;
+
+      &:focus {
+        border: 2px solid var(--md-sys-color-primary);
+      }
+    }
+  }
+}
+
+// Checkbox
+.checkbox-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-right: 16px;
+  margin-bottom: 8px;
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--md-sys-color-on-surface-variant);
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:checked {
+      background-color: var(--md-sys-color-primary);
+      border-color: var(--md-sys-color-primary);
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 1px;
+        width: 4px;
+        height: 10px;
+        border: solid var(--md-sys-color-on-primary);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+// Radio
+.radio-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-right: 16px;
+  margin-bottom: 8px;
+
+  input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--md-sys-color-on-surface-variant);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    &:checked {
+      border-color: var(--md-sys-color-primary);
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 10px;
+        height: 10px;
+        background-color: var(--md-sys-color-primary);
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// Switch
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 32px;
+  margin-right: 16px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider-track {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--md-sys-color-surface-container-highest);
+    border: 2px solid var(--md-sys-color-outline);
+    border-radius: 16px;
+    transition: .4s;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 6px;
+      bottom: 6px;
+      background-color: var(--md-sys-color-outline);
+      border-radius: 50%;
+      transition: .4s;
+    }
+  }
+
+  input:checked + .slider-track {
+    background-color: var(--md-sys-color-primary);
+    border-color: var(--md-sys-color-primary);
+
+    &::before {
+      transform: translateX(20px);
+      background-color: var(--md-sys-color-on-primary);
+      height: 24px;
+      width: 24px;
+      bottom: 2px;
+      left: 4px;
+    }
+  }
+}
+
+// Slider (Range)
+.slider {
+  width: 100%;
+  margin: 16px 0;
+
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--md-sys-color-surface-container-highest);
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--md-sys-color-primary);
+      cursor: pointer;
+      box-shadow: var(--md-sys-elevation-level-1);
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--md-sys-color-primary);
+      cursor: pointer;
+      border: none;
+      box-shadow: var(--md-sys-elevation-level-1);
+    }
+  }
+}
+
+// =============================================================================
+// Content & Display
+// =============================================================================
+
+// Cards (Extended)
+// Base .card is in _components.scss (filled, elevated)
+
+.card-outlined {
+  @extend .card;
+  background-color: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  box-shadow: none; // No elevation for outlined
+}
+
+.card-filled {
+  @extend .card;
+  @extend .filled; // Use existing filled style
+}
+
+.card-elevated {
+  @extend .card;
+  @extend .elevated; // Use existing elevated style
+}
+
+// Lists
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--md-sys-color-surface);
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px; // Reduced vertical padding
+    min-height: 56px;  // One-line height target
+    color: var(--md-sys-color-on-surface);
+    border-bottom: 1px solid transparent; // Spacer/divider prep
+    cursor: default;
+
+    &:hover {
+      background-color: var(--md-sys-color-surface-variant);
+    }
+
+    &.divider {
+        border-bottom-color: var(--md-sys-color-outline-variant);
+    }
+
+    .list-item-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .list-item-headline {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .list-item-supporting-text {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--md-sys-color-on-surface-variant);
+    }
+
+    .leading-element {
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--md-sys-color-on-surface-variant);
+      width: 40px;
+      height: 40px;
+
+      // Avatar placeholder
+      &.avatar {
+        background-color: var(--md-sys-color-primary-container);
+        color: var(--md-sys-color-on-primary-container);
+        border-radius: 50%;
+        font-weight: 500;
+      }
+    }
+
+    .trailing-element {
+      margin-left: 16px;
+      color: var(--md-sys-color-on-surface-variant);
+    }
+  }
+}
+
+// Chips
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid var(--md-sys-color-outline);
+  background-color: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  gap: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  &:hover {
+    background-color: var(--md-sys-color-surface-variant);
+  }
+
+  &.filled {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border: none;
+  }
+
+  &.elevated {
+    background-color: var(--md-sys-color-surface-container-low);
+    box-shadow: var(--md-sys-elevation-level-1);
+    border: none;
+  }
+}
+
+// Badge
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error);
+  font-size: 11px;
+  font-weight: 500;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0 4px;
+
+  // Can be used as absolute positioning if parent has relative
+  &.floating {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+  }
+
+  &.small {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    min-width: 6px;
+  }
+}
+
+// Dialog
+.dialog {
+  background-color: var(--md-sys-color-surface-container-high);
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: var(--md-sys-elevation-level-3);
+  max-width: 560px;
+  min-width: 280px;
+
+  // For demo in static pages, we assume it's a div
+  &.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  .dialog-headline {
+    font-size: 24px;
+    color: var(--md-sys-color-on-surface);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .dialog-content {
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
+
+// Menus
+.menu {
+  background-color: var(--md-sys-color-surface-container);
+  border-radius: 4px;
+  box-shadow: var(--md-sys-elevation-level-2);
+  padding: 8px 0;
+  min-width: 112px;
+  max-width: 280px;
+  display: inline-block; // For display
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    height: 48px;
+    color: var(--md-sys-color-on-surface);
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--md-sys-color-surface-variant);
+    }
+
+    .leading-icon {
+      margin-right: 12px;
+      color: var(--md-sys-color-on-surface-variant);
+    }
+  }
+}
+
+// Tooltip
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dotted var(--md-sys-color-on-surface-variant);
+
+  &::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background-color: var(--md-sys-color-inverse-surface);
+    color: var(--md-sys-color-inverse-on-surface);
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 10;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+// Progress Indicators
+.progress-linear {
+  width: 100%;
+  height: 4px;
+  background-color: var(--md-sys-color-surface-container-highest);
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background-color: var(--md-sys-color-primary);
+    animation: progress-indeterminate 1.5s infinite ease-in-out;
+  }
+}
+
+@keyframes progress-indeterminate {
+  0% { left: -30%; width: 30%; }
+  50% { width: 60%; }
+  100% { left: 100%; width: 10%; }
+}
+
+.progress-circular {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--md-sys-color-surface-container-highest);
+  border-top-color: var(--md-sys-color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+// Snackbar
+.snackbar {
+  min-width: 288px;
+  max-width: 568px;
+  background-color: var(--md-sys-color-inverse-surface);
+  color: var(--md-sys-color-inverse-on-surface);
+  padding: 14px 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--md-sys-elevation-level-3);
+  font-size: 14px;
+
+  // For demo
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+
+  .snackbar-action {
+    color: var(--md-sys-color-inverse-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Divider
+.divider {
+  height: 1px;
+  background-color: var(--md-sys-color-outline-variant);
+  border: none;
+  margin: 16px 0;
+}
+
+// =============================================================================
+// Layout & Navigation
+// =============================================================================
+
+// Tabs
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--md-sys-color-outline);
+  margin-bottom: 16px;
+
+  .tab-item {
+    padding: 0 16px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--md-sys-color-surface-variant);
+    }
+
+    &.active {
+      color: var(--md-sys-color-primary);
+      border-bottom-color: var(--md-sys-color-primary);
+    }
+  }
+}
+
+// Navigation Rail (Responsive alternative to sidebar)
+// Usually shown on tablet size, but here as a component
+.nav-rail {
+  width: 80px;
+  height: 100%;
+  background-color: var(--md-sys-color-surface);
+  border-right: 1px solid var(--md-sys-color-outline);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+
+  .nav-rail-item {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--md-sys-color-on-surface-variant);
+    border-radius: 28px; // circular pill for active
+    cursor: pointer;
+    margin-bottom: 12px;
+
+    .icon {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .label {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    &.active {
+      background-color: var(--md-sys-color-secondary-container);
+      color: var(--md-sys-color-on-secondary-container);
+
+      .icon {
+        // filled icon usually
+      }
+    }
+
+    &:hover:not(.active) {
+      background-color: var(--md-sys-color-surface-variant);
+    }
+  }
+}
+
+// Bottom Sheet
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 640px;
+  background-color: var(--md-sys-color-surface-container-low);
+  border-radius: 28px 28px 0 0;
+  box-shadow: var(--md-sys-elevation-level-1);
+  padding: 0 0 24px 0;
+  z-index: 100;
+
+  .drag-handle {
+    width: 32px;
+    height: 4px;
+    background-color: var(--md-sys-color-outline-variant);
+    border-radius: 2px;
+    margin: 22px auto;
+  }
+
+  .sheet-content {
+    padding: 0 24px;
+  }
+}
