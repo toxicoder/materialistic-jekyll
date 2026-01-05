@@ -13,6 +13,49 @@ A Material Design 3 Jekyll theme for technical documentation. Inspired by the st
 
 ## Installation
 
+There are three ways to use this theme:
+
+### 1. As a Ruby Gem (Recommended)
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "materialistic-jekyll-theme"
+```
+
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: materialistic-jekyll-theme
+```
+
+Then execute:
+
+```bash
+$ bundle
+```
+
+### 2. As a Remote Theme (GitHub Pages)
+
+If you are hosting on GitHub Pages, you can use the `jekyll-remote-theme` plugin.
+
+Add this to your `Gemfile`:
+
+```ruby
+gem "jekyll-remote-theme"
+```
+
+And add this to your `_config.yml`:
+
+```yaml
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: toxicoder/materialistic-jekyll
+```
+
+### 3. Forking (Development)
+
 1.  Fork or copy this repository.
 2.  Install dependencies:
     ```bash
@@ -41,7 +84,9 @@ docs/
 
 ### Navigation
 
-Define your sidebar structure in `_data/navigation.yml`.
+You **must** create a `_data/navigation.yml` file to define your sidebar structure.
+
+Example `_data/navigation.yml`:
 
 ```yaml
 docs:
@@ -52,6 +97,8 @@ docs:
       - title: Project Information
         url: /docs/configuration/project-information/
 ```
+
+If you do not provide this file, the sidebar will attempt to list all pages, which may not be ideal.
 
 ### Search
 
