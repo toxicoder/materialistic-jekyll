@@ -85,5 +85,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Auto-expand Sidebar
+  const activeLink = document.querySelector('.nav-link.active');
+  if (activeLink) {
+    let parent = activeLink.closest('details');
+    while (parent) {
+      parent.setAttribute('open', '');
+      parent = parent.parentElement.closest('details');
+    }
+  }
+
   console.log('Materialistic Jekyll Theme Loaded');
 });
