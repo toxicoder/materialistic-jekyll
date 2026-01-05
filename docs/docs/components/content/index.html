@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" class="palette-25"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Content &amp; Display | Materialistic Jekyll Theme</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Content &amp; Display" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Material Design 3 Jekyll theme for technical documentation." />
+<meta property="og:description" content="A Material Design 3 Jekyll theme for technical documentation." />
+<link rel="canonical" href="https://toxicoder.github.io/materialistic-jekyll/docs/components/content/" />
+<meta property="og:url" content="https://toxicoder.github.io/materialistic-jekyll/docs/components/content/" />
+<meta property="og:site_name" content="Materialistic Jekyll Theme" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Content &amp; Display" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A Material Design 3 Jekyll theme for technical documentation.","headline":"Content &amp; Display","url":"https://toxicoder.github.io/materialistic-jekyll/docs/components/content/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/materialistic-jekyll/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="https://toxicoder.github.io/materialistic-jekyll/feed.xml" title="Materialistic Jekyll Theme" /></head>
+<!-- Extra CSS -->
+  
+    
+  
+
+  <body><header class="app-bar">
+  <button id="menu-toggle" class="btn btn-outlined" style="margin-right: 16px; display: none;" aria-label="Toggle navigation">
+    <span style="font-size: 20px;">☰</span>
+  </button>
+  <div class="title">
+    <a href="/materialistic-jekyll/" style="color: inherit;">Materialistic Jekyll Theme</a>
+  </div>
+  <div style="flex: 1;"></div>
+  <div class="nav-controls">
+    <select id="theme-picker" class="btn btn-outlined btn-control">
+      
+      <option value="palette-1">Purple</option>
+      
+      <option value="palette-2">Red 2</option>
+      
+      <option value="palette-3">Red 3</option>
+      
+      <option value="palette-4">Red 4</option>
+      
+      <option value="palette-5">Orange 5</option>
+      
+      <option value="palette-6">Gold</option>
+      
+      <option value="palette-7">Green 7</option>
+      
+      <option value="palette-8">Green 8</option>
+      
+      <option value="palette-9">Teal</option>
+      
+      <option value="palette-10">Cyan 10</option>
+      
+      <option value="palette-11">Blue 11</option>
+      
+      <option value="palette-12">Blue 12</option>
+      
+      <option value="palette-13">Blue 13</option>
+      
+      <option value="palette-14">Purple 14</option>
+      
+      <option value="palette-15">Red 15</option>
+      
+      <option value="palette-16">Red</option>
+      
+      <option value="palette-17">Red 17</option>
+      
+      <option value="palette-18">Orange 18</option>
+      
+      <option value="palette-19">Orange 19</option>
+      
+      <option value="palette-20">Yellow 20</option>
+      
+      <option value="palette-21">Green 21</option>
+      
+      <option value="palette-22">Cyan 22</option>
+      
+      <option value="palette-23">Cyan 23</option>
+      
+      <option value="palette-24">Blue 24</option>
+      
+      <option value="palette-25">Deep Blue</option>
+      
+      <option value="palette-26">Blue 26</option>
+      
+      <option value="palette-27">Blue 27</option>
+      
+      <option value="palette-28">Purple 28</option>
+      
+      <option value="palette-29">Pink 29</option>
+      
+      <option value="palette-30">Pink</option>
+      
+      <option value="palette-31">Red 31</option>
+      
+      <option value="palette-32">Red 32</option>
+      
+      <option value="palette-33">Orange 33</option>
+      
+      <option value="palette-34">Orange 34</option>
+      
+      <option value="palette-35">Yellow 35</option>
+      
+      <option value="palette-36">Green 36</option>
+      
+      <option value="palette-37">Green 37</option>
+      
+      <option value="palette-38">Green 38</option>
+      
+      <option value="palette-39">Cyan 39</option>
+      
+      <option value="palette-40">Cyan 40</option>
+      
+      <option value="palette-41">Blue 41</option>
+      
+      <option value="palette-42">Blue 42</option>
+      
+      <option value="palette-43">Blue 43</option>
+      
+      <option value="palette-44">Purple 44</option>
+      
+      <option value="palette-45">Pink 45</option>
+      
+      <option value="palette-46">Red 46</option>
+      
+      <option value="palette-47">Red 47</option>
+      
+      <option value="palette-48">Red 48</option>
+      
+      <option value="palette-49">Orange 49</option>
+      
+      <option value="palette-50">Orange 50</option>
+      
+    </select>
+    <button id="dark-mode-toggle" class="btn btn-outlined btn-control" aria-label="Toggle dark mode">
+      <span style="font-size: 20px;">☀</span>
+    </button>
+  </div>
+</header>
+<div class="main-container"><nav class="sidebar">
+  <div class="sidebar-header" style="padding-bottom: 16px;">
+    <strong>Navigation</strong>
+  </div>
+
+  <div class="sidebar-search">
+    <input type="text" id="search-input" placeholder="Search docs..." aria-label="Search documentation">
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  
+    <ul class="nav-list">
+      
+        
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/">
+      Home
+    </a>
+  
+</li>
+
+      
+        
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/getting-started/">
+      Getting Started
+    </a>
+  
+</li>
+
+      
+        
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/high-level-features/">
+      High-Level Features
+    </a>
+  
+</li>
+
+      
+        
+
+<li class="nav-item">
+  
+    <details >
+      <summary class="nav-link">
+        Configuration Options
+        <svg class="nav-arrow" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </summary>
+      <ul class="nav-list nested">
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/configuration/project-information/">
+      Project Information
+    </a>
+  
+</li>
+
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/configuration/advanced/">
+      Advanced Settings
+    </a>
+  
+</li>
+
+        
+      </ul>
+    </details>
+  
+</li>
+
+      
+        
+
+<li class="nav-item">
+  
+    <details open>
+      <summary class="nav-link">
+        Components
+        <svg class="nav-arrow" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </summary>
+      <ul class="nav-list nested">
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/components/buttons/">
+      Buttons
+    </a>
+  
+</li>
+
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/components/inputs/">
+      Inputs & Controls
+    </a>
+  
+</li>
+
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link active" href="/materialistic-jekyll/docs/components/content/">
+      Content & Display
+    </a>
+  
+</li>
+
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/components/layout/">
+      Layout & Navigation
+    </a>
+  
+</li>
+
+        
+      </ul>
+    </details>
+  
+</li>
+
+      
+        
+
+<li class="nav-item">
+  
+    <details >
+      <summary class="nav-link">
+        API Reference
+        <svg class="nav-arrow" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </summary>
+      <ul class="nav-list nested">
+        
+          
+
+<li class="nav-item">
+  
+    <details >
+      <summary class="nav-link">
+        Endpoints
+        <svg class="nav-arrow" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </summary>
+      <ul class="nav-list nested">
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/api/users/">
+      Users
+    </a>
+  
+</li>
+
+        
+          
+
+<li class="nav-item">
+  
+    <a class="nav-link " href="/materialistic-jekyll/docs/api/posts/">
+      Posts
+    </a>
+  
+</li>
+
+        
+      </ul>
+    </details>
+  
+</li>
+
+        
+      </ul>
+    </details>
+  
+</li>
+
+      
+    </ul>
+  
+</nav>
+<main class="content" aria-label="Content">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Content &amp; Display</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="content--display">Content &amp; Display</h1>
+
+<p>These components help organize and display content.</p>
+
+<h2 id="cards">Cards</h2>
+
+<p>Cards contain content and actions about a single subject.</p>
+
+<h3 id="elevated-card">Elevated Card</h3>
+<p>Elevated cards have a shadow and a background color.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is an elevated card.
+{: .card .card-elevated }
+</code></pre></div></div>
+<div class="card card-elevated">
+  This is an elevated card.
+</div>
+
+<h3 id="filled-card">Filled Card</h3>
+<p>Filled cards have a background color but no shadow.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is a filled card.
+{: .card .card-filled }
+</code></pre></div></div>
+<div class="card card-filled">
+  This is a filled card.
+</div>
+
+<h3 id="outlined-card">Outlined Card</h3>
+<p>Outlined cards have a border and a transparent background.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is an outlined card.
+{: .card .card-outlined }
+</code></pre></div></div>
+<div class="card card-outlined">
+  This is an outlined card.
+</div>
+
+<h2 id="lists">Lists</h2>
+
+<p>Lists are continuous, vertical indexes of text or images.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"leading-element avatar"</span><span class="nt">&gt;</span>A<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list-item-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-headline"</span><span class="nt">&gt;</span>Headline<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-supporting-text"</span><span class="nt">&gt;</span>Supporting text<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"trailing-element"</span><span class="nt">&gt;</span>10m<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"leading-element avatar"</span><span class="nt">&gt;</span>B<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list-item-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-headline"</span><span class="nt">&gt;</span>Headline 2<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-supporting-text"</span><span class="nt">&gt;</span>Supporting text 2<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"trailing-element"</span><span class="nt">&gt;</span>5m<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+<ul class="list">
+  <li class="list-item">
+    <span class="leading-element avatar">A</span>
+    <div class="list-item-content">
+      <span class="list-item-headline">Headline</span>
+      <span class="list-item-supporting-text">Supporting text</span>
+    </div>
+    <span class="trailing-element">10m</span>
+  </li>
+  <li class="list-item divider"></li>
+  <li class="list-item">
+    <span class="leading-element avatar">B</span>
+    <div class="list-item-content">
+      <span class="list-item-headline">Headline 2</span>
+      <span class="list-item-supporting-text">Supporting text 2</span>
+    </div>
+    <span class="trailing-element">5m</span>
+  </li>
+</ul>
+
+<h2 id="chips">Chips</h2>
+
+<p>Chips help people enter information, make selections, filter content, or trigger actions.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Assist
+{: .chip }
+
+Filter
+{: .chip .filled }
+
+Input
+{: .chip .elevated }
+</code></pre></div></div>
+<p><span class="chip">Assist</span>
+<span class="chip filled">Filter</span>
+<span class="chip elevated">Input</span></p>
+
+<h2 id="badges">Badges</h2>
+
+<p>Badges show notifications, counts, or status information on other components.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge small"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+<p><span class="badge">3</span>
+<span class="badge small"></span></p>
+
+<h2 id="tooltips">Tooltips</h2>
+
+<p>Tooltips display informative text when users hover over, focus on, or tap an element.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tooltip"</span> <span class="na">data-tooltip=</span><span class="s">"This is a tooltip"</span><span class="nt">&gt;</span>Hover me<span class="nt">&lt;/span&gt;</span>
+</code></pre></div></div>
+<p><span class="tooltip" data-tooltip="This is a tooltip">Hover me</span></p>
+
+<h2 id="progress-indicators">Progress Indicators</h2>
+
+<p>Progress indicators express an unspecified wait time or display the length of a process.</p>
+
+<h3 id="linear-progress">Linear Progress</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-linear"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="progress-linear"></div>
+
+<h3 id="circular-progress">Circular Progress</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-circular"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="progress-circular"></div>
+
+<h2 id="snackbars">Snackbars</h2>
+
+<p>Snackbars provide brief messages about app processes at the bottom of the screen.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"snackbar"</span> <span class="na">style=</span><span class="s">"position: static; transform: none; margin: 0 auto;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"snackbar-text"</span><span class="nt">&gt;</span>Single-line snackbar<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"snackbar-action"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="snackbar" style="position: static; transform: none; margin: 0 auto;">
+  <span class="snackbar-text">Single-line snackbar</span>
+  <button class="snackbar-action">Action</button>
+</div>
+
+<h2 id="tables">Tables</h2>
+
+<p>Tables display sets of data.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Header 1 | Header 2 |
+| :------- | :------- |
+| Row 1    | Data 1   |
+| Row 2    | Data 2   |
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Header 1</th>
+      <th style="text-align: left">Header 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Row 1</td>
+      <td style="text-align: left">Data 1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Row 2</td>
+      <td style="text-align: left">Data 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="code-blocks">Code Blocks</h2>
+
+<p>Code blocks display snippets of code.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-block"</span><span class="nt">&gt;</span>
+  puts "Hello World"
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="code-block">
+  puts "Hello World"
+</div>
+
+  </div>
+
+</article>
+
+      </main>
+    </div><footer class="footer">
+  <div class="wrapper">
+    <p>Materialistic Jekyll Theme &copy; 2026</p>
+  </div>
+</footer>
+<script src="/materialistic-jekyll/assets/js/main.js"></script>
+    <script src="/materialistic-jekyll/assets/js/search.js"></script>
+
+    <!-- Extra JS -->
+    
+      
+    
+
+  </body>
+
+</html>

@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Posts API | Materialistic Jekyll Theme</title>
+<title>Layout &amp; Navigation | Materialistic Jekyll Theme</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Posts API" />
+<meta property="og:title" content="Layout &amp; Navigation" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A Material Design 3 Jekyll theme for technical documentation." />
 <meta property="og:description" content="A Material Design 3 Jekyll theme for technical documentation." />
-<link rel="canonical" href="https://toxicoder.github.io/materialistic-jekyll/docs/api/posts/" />
-<meta property="og:url" content="https://toxicoder.github.io/materialistic-jekyll/docs/api/posts/" />
+<link rel="canonical" href="https://toxicoder.github.io/materialistic-jekyll/docs/components/layout/" />
+<meta property="og:url" content="https://toxicoder.github.io/materialistic-jekyll/docs/components/layout/" />
 <meta property="og:site_name" content="Materialistic Jekyll Theme" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Posts API" />
+<meta property="twitter:title" content="Layout &amp; Navigation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A Material Design 3 Jekyll theme for technical documentation.","headline":"Posts API","url":"https://toxicoder.github.io/materialistic-jekyll/docs/api/posts/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"A Material Design 3 Jekyll theme for technical documentation.","headline":"Layout &amp; Navigation","url":"https://toxicoder.github.io/materialistic-jekyll/docs/components/layout/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/materialistic-jekyll/assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -235,7 +235,7 @@
 
 <li class="nav-item">
   
-    <details >
+    <details open>
       <summary class="nav-link">
         Components
         <svg class="nav-arrow" viewBox="0 0 24 24" width="24" height="24">
@@ -281,7 +281,7 @@
 
 <li class="nav-item">
   
-    <a class="nav-link " href="/materialistic-jekyll/docs/components/layout/">
+    <a class="nav-link active" href="/materialistic-jekyll/docs/components/layout/">
       Layout & Navigation
     </a>
   
@@ -335,7 +335,7 @@
 
 <li class="nav-item">
   
-    <a class="nav-link active" href="/materialistic-jekyll/docs/api/posts/">
+    <a class="nav-link " href="/materialistic-jekyll/docs/api/posts/">
       Posts
     </a>
   
@@ -361,13 +361,124 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Posts API</h1>
+    <h1 class="post-title">Layout &amp; Navigation</h1>
   </header>
 
   <div class="post-content">
-    <h1 id="posts-api">Posts API</h1>
+    <h1 id="layout--navigation">Layout &amp; Navigation</h1>
 
-<p>This is a placeholder page for the Posts API endpoint.</p>
+<p>Components that help structure the page and navigate between different sections.</p>
+
+<h2 id="tabs">Tabs</h2>
+
+<p>Tabs organize content across different screens, data sets, and other interactions.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-item active"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="tabs">
+  <div class="tab-item active">Tab 1</div>
+  <div class="tab-item">Tab 2</div>
+  <div class="tab-item">Tab 3</div>
+</div>
+
+<h2 id="navigation-rail">Navigation Rail</h2>
+
+<p>The navigation rail provides ergonomic movement between primary destinations in apps.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-rail"</span> <span class="na">style=</span><span class="s">"height: 300px; display:inline-flex;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-rail-item active"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>●<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>One<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-rail-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>○<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="nav-rail" style="height: 300px; display:inline-flex;">
+  <div class="nav-rail-item active">
+    <span class="icon">●</span>
+    <span class="label">One</span>
+  </div>
+  <div class="nav-rail-item">
+    <span class="icon">○</span>
+    <span class="label">Two</span>
+  </div>
+</div>
+
+<h2 id="bottom-sheets">Bottom Sheets</h2>
+
+<p>Bottom sheets display supplementary content and actions on mobile devices.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bottom-sheet"</span> <span class="na">style=</span><span class="s">"position:relative; transform:none; left:auto; bottom:auto;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"drag-handle"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sheet-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Bottom sheet content goes here.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="bottom-sheet" style="position:relative; transform:none; left:auto; bottom:auto;">
+  <div class="drag-handle"></div>
+  <div class="sheet-content">
+    <p>Bottom sheet content goes here.</p>
+  </div>
+</div>
+
+<h2 id="dialogs">Dialogs</h2>
+
+<p>Dialogs provide important prompts in a user flow.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dialog"</span> <span class="na">style=</span><span class="s">"position: static; transform: none; box-shadow: var(--md-sys-elevation-level-3); margin: 0 auto;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dialog-headline"</span><span class="nt">&gt;</span>Dialog Title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dialog-content"</span><span class="nt">&gt;</span>
+    This is a basic dialog example showing the structure.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dialog-actions"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-text"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-text"</span><span class="nt">&gt;</span>OK<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="dialog" style="position: static; transform: none; box-shadow: var(--md-sys-elevation-level-3); margin: 0 auto;">
+  <div class="dialog-headline">Dialog Title</div>
+  <div class="dialog-content">
+    This is a basic dialog example showing the structure.
+  </div>
+  <div class="dialog-actions">
+    <button class="btn btn-text">Cancel</button>
+    <button class="btn btn-text">OK</button>
+  </div>
+</div>
+
+<h2 id="menus">Menus</h2>
+
+<p>Menus display a list of choices on a temporary surface.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>Item 1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>Item 2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>Item 3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<div class="menu">
+  <div class="menu-item">Item 1</div>
+  <div class="menu-item">Item 2</div>
+  <div class="menu-item">Item 3</div>
+</div>
+
+<h2 id="dividers">Dividers</h2>
+
+<p>Dividers distinguish between sections of content.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+<hr class="divider" />
+
 
   </div>
 
