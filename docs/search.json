@@ -2,14 +2,6 @@
   
     
     {
-      "title": "Advanced Settings",
-      "url": "/materialistic-jekyll/docs/configuration/advanced/",
-      "content": "Advanced SettingsThis is a placeholder page for Advanced Settings."
-    },
-    
-  
-    
-    {
       "title": "Buttons",
       "url": "/materialistic-jekyll/docs/components/buttons/",
       "content": "ButtonsButtons allow users to take actions, and make choices, with a single tap.Common ButtonsFilled Button (Primary)The filled button is the primary button for the most important action.&amp;lt;button class=&quot;btn btn-primary&quot;&amp;gt;Primary&amp;lt;/button&amp;gt;PrimaryOutlined ButtonOutlined buttons are medium-emphasis buttons. They contain actions that are important but aren’t the primary action in an app.&amp;lt;button class=&quot;btn btn-outlined&quot;&amp;gt;Outlined&amp;lt;/button&amp;gt;OutlinedTonal ButtonTonal buttons are an alternative middle ground between filled and outlined buttons. They’re useful in contexts where a lower-priority button requires slightly more emphasis than an outline would give.&amp;lt;button class=&quot;btn btn-tonal&quot;&amp;gt;Tonal&amp;lt;/button&amp;gt;TonalElevated ButtonElevated buttons are essentially filled tonal buttons with a shadow. They prevent separation issues on surfaces that have the same color as the button.&amp;lt;button class=&quot;btn btn-elevated&quot;&amp;gt;Elevated&amp;lt;/button&amp;gt;ElevatedText ButtonText buttons are used for low-emphasis actions.&amp;lt;button class=&quot;btn btn-text&quot;&amp;gt;Text Button&amp;lt;/button&amp;gt;Text ButtonFloating Action Buttons (FAB)FABs represent the primary action of a screen.Standard FAB&amp;lt;button class=&quot;fab&quot;&amp;gt;+&amp;lt;/button&amp;gt;+Small FAB&amp;lt;button class=&quot;fab fab-small&quot;&amp;gt;+&amp;lt;/button&amp;gt;+Large FAB&amp;lt;button class=&quot;fab fab-large&quot;&amp;gt;+&amp;lt;/button&amp;gt;+Extended FABExtended FABs are wider and include a text label.&amp;lt;button class=&quot;fab-extended&quot;&amp;gt;  &amp;lt;span&amp;gt;+&amp;lt;/span&amp;gt;  &amp;lt;span&amp;gt;Create&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;  +  CreateIcon ButtonsIcon buttons help people take minor actions with one tap.&amp;lt;!-- Standard --&amp;gt;&amp;lt;button class=&quot;icon-btn&quot;&amp;gt;★&amp;lt;/button&amp;gt;&amp;lt;!-- Filled --&amp;gt;&amp;lt;button class=&quot;icon-btn filled&quot;&amp;gt;★&amp;lt;/button&amp;gt;&amp;lt;!-- Tonal --&amp;gt;&amp;lt;button class=&quot;icon-btn tonal&quot;&amp;gt;★&amp;lt;/button&amp;gt;&amp;lt;!-- Outlined --&amp;gt;&amp;lt;button class=&quot;icon-btn outlined&quot;&amp;gt;★&amp;lt;/button&amp;gt;★★★★Segmented ButtonsSegmented buttons help people select options, switch views, or sort elements.&amp;lt;div class=&quot;segmented-btn-group&quot;&amp;gt;  &amp;lt;button class=&quot;segmented-btn selected&quot;&amp;gt;Day&amp;lt;/button&amp;gt;  &amp;lt;button class=&quot;segmented-btn&quot;&amp;gt;Week&amp;lt;/button&amp;gt;  &amp;lt;button class=&quot;segmented-btn&quot;&amp;gt;Month&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt;  Day  Week  Month"
@@ -44,7 +36,7 @@
     {
       "title": "High-Level Features",
       "url": "/materialistic-jekyll/docs/high-level-features/",
-      "content": "High-Level FeaturesThis is a placeholder page for High-Level Features.Components DemoDemo Button  This is a feature showcase using a filled card component."
+      "content": "High-Level FeaturesThis theme is packed with features to make your documentation stand out.  Material Design 3: Fully compliant with the latest Material Design specifications (Material You).  Structured Documentation: Use the docs/ directory for your content.  Nested Navigation: Define a hierarchical sidebar in _data/navigation.yml.  Search: Built-in client-side search.  Color Palettes: 50 pre-made color palettes.  Responsive: Optimized for mobile, tablet, and desktop.Components DemoDemo Button  This is a feature showcase using a filled card component."
     },
     
   
@@ -84,14 +76,6 @@
   
     
     {
-      "title": "Posts API",
-      "url": "/materialistic-jekyll/docs/api/posts/",
-      "content": "Posts APIThis is a placeholder page for the Posts API endpoint."
-    },
-    
-  
-    
-    {
       "title": "Project Information",
       "url": "/materialistic-jekyll/docs/configuration/project-information/",
       "content": "Project InformationThis page demonstrates a nested documentation page.DetailsThe URL for this page should be /docs/configuration/project-information/."
@@ -100,14 +84,6 @@
   
     
   
-    
-  
-    
-    {
-      "title": "Users API",
-      "url": "/materialistic-jekyll/docs/api/users/",
-      "content": "# Users APIThis is a placeholder page for the Users API endpoint."
-    },
     
   
     
