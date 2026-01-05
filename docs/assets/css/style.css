@@ -2963,4 +2963,30 @@ table th {
   padding: 0 24px;
 }
 
+.ripple-surface, .list-item, .nav-rail-item, .tab-item, .chip, .segmented-btn, .icon-btn, .fab, .fab-extended, .btn, .btn-elevated, .btn-tonal, .btn-text {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: currentColor;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+.list-item {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */
