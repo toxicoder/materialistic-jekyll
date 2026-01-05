@@ -3,6 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchResultsContainer = document.getElementById('search-results');
   let searchData = [];
 
+  // Debounce function
+  function debounce(func, wait) {
+    let timeout;
+    return function() {
+      const context = this;
+      const args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+  }
+
   if (searchInput) {
     // Fetch search data
     const searchUrl = window.searchUrl || '/search.json';
@@ -13,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(error => console.error('Error fetching search data:', error));
 
-    searchInput.addEventListener('input', function() {
+    const handleSearch = function() {
       const query = this.value.toLowerCase();
       searchResultsContainer.innerHTML = '';
 
@@ -41,7 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
         noResults.textContent = 'No results found';
         searchResultsContainer.appendChild(noResults);
       }
-    });
+    };
+
+    // Apply debounce
+    searchInput.addEventListener('input', debounce(handleSearch, 300));
 
     // Close results when clicking outside
     document.addEventListener('click', function(e) {
