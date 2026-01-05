@@ -20,7 +20,7 @@
     {
       "title": "Configuration",
       "url": "/materialistic-jekyll/docs/configuration/",
-      "content": "ConfigurationColor PalettesMaterialistic Jekyll Theme comes with 50 pre-generated color palettes. You can set the global palette in _config.yml:theme_settings:  palette: &quot;palette-1&quot;Or override it per page:---palette: &quot;palette-10&quot;---NavigationThe sidebar navigation is automatically generated based on the pages in your project."
+      "content": "Configuration  Color Palettes  Materialistic Jekyll Theme comes with 50 pre-generated color palettes. You can set the global palette in _config.yml:  theme_settings:  palette: &quot;palette-1&quot;    Or override it per page:  ---palette: &quot;palette-10&quot;---  NavigationThe sidebar navigation is automatically generated based on the pages in your project."
     },
     
   
@@ -28,7 +28,7 @@
     {
       "title": "Getting Started",
       "url": "/materialistic-jekyll/docs/getting-started/",
-      "content": "Getting StartedInstallationThis theme is designed to be used as a template.  Fork the repository or click the “Use this template” button on GitHub.  Clone your new repository locally.  Run bundle install to install dependencies.UsageCreate your markdown files and specify the layout in the front matter.---layout: doctitle: My Documentation---Running Locallybundle exec jekyll serve"
+      "content": "Getting Started  Installation  This theme is designed to be used as a template.      Fork the repository or click the “Use this template” button on GitHub.    Clone your new repository locally.    Run bundle install to install dependencies.  UsageCreate your markdown files and specify the layout in the front matter.---layout: doctitle: My Documentation---  Running Locally  bundle exec jekyll serve  "
     },
     
   
@@ -36,7 +36,7 @@
     {
       "title": "High-Level Features",
       "url": "/materialistic-jekyll/docs/high-level-features/",
-      "content": "High-Level FeaturesThis is a placeholder page for High-Level Features."
+      "content": "High-Level FeaturesThis is a placeholder page for High-Level Features.Components DemoDemo Button  This is a feature showcase using a filled card component."
     },
     
   
@@ -46,7 +46,7 @@
     {
       "title": "Documentation Home",
       "url": "/materialistic-jekyll/docs/",
-      "content": "Welcome to Materialistic JekyllThis is the main documentation hub. Use the sidebar to navigate through the topics.Features  Material Design 3: Fully compliant with the latest design specs.  Nested Navigation: Organize your docs with ease.  Search: Built-in client-side search."
+      "content": "Welcome to Materialistic JekyllThis is the main documentation hub. Use the sidebar to navigate through the topics.FeaturesMaterial Design 3Fully compliant with the latest design specs.Nested NavigationOrganize your docs with ease.SearchBuilt-in client-side search."
     },
     
   
